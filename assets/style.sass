@@ -1,0 +1,16 @@
+.translucent
+  -webkit-backdrop-filter: saturate(50%) blur(30px)
+  backdrop-filter: saturate(50%) blur(30px)
+
+$gradient: linear-gradient(165deg, rgba(158,200,241,1) 0%, rgba(25,135,242,1) 100%) !important
+
+.gradient
+  background: rgb(158,200,241) !important
+  background: $gradient
+
+.gradient-text
+  background-image: $gradient
+  background-clip: text
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+
