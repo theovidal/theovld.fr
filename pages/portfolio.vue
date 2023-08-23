@@ -1,10 +1,10 @@
 <template>
   <banner
       center
-      src="/img/alps.jpeg">
+      src="/img/alps-min.jpeg">
     <v-container>
-      <v-row class="align-center flex-column">
-        <h1 class="text-h1">{{ $t('portfolio.name') }}</h1>
+      <v-row class="flex-column align-center">
+        <h1 class="text-h1 text-center">{{ $t('portfolio.name') }}</h1>
       </v-row>
     </v-container>
   </banner>
@@ -12,21 +12,24 @@
     <banner
       v-for="(links, project, i) in showcase"
       :key="project"
-      :class="{ right: i % 2 === 1}"
       center
-      :src="`/img/portfolio/${project}-banner.png`">
+      class="portfolio-parallax"
+      :class="i % 2 === 1 ? rightClasses : ''"
+      :src="`/img/portfolio/${project}-banner-min.png`">
       <v-container>
         <v-row class="justify-center">
-          <v-col>
+          <v-col sm="7">
             <v-row
-                class="flex-column justify-center"
-                :class="{ 'text-right': i % 2 === 1 }"
+                class="flex-column justify-center text-center"
+                :class="{ 'text-sm-right': i % 2 === 1, 'text-sm-left': i % 2 === 0 }"
                 style="height: 100%">
               <h1 class="gradient-text">{{ $t(`portfolio.${project}.name`) }}</h1>
               <span class="text-overline">{{ $t(`portfolio.${project}.short`) }}</span>
               <p class="text-justify">{{ $t(`portfolio.${project}.description`) }}</p>
             </v-row>
-            <v-row :class="{ 'justify-end': i % 2 === 1 }">
+            <v-row
+                class="justify-center"
+                :class="{ 'justify-sm-end': i % 2 === 1 }">
               <v-tooltip
                   v-for="(url, name) in links"
                   :key="name"
@@ -45,13 +48,14 @@
             </v-row>
           </v-col>
           <v-col
-              class="text-center"
+              cols="5"
+              class="d-none d-sm-flex justify-center align-center"
               :class="{ 'order-first': i % 2 === 0 }">
             <v-avatar
                 size="200"
                 rounded="0">
               <v-img
-                  :src="`/img/portfolio/${project}-icon.png`"
+                  :src="`/img/portfolio/${project}-icon-min.png`"
                   :alt="$t(`portfolio.${project}.name`)"/>
             </v-avatar>
           </v-col>
@@ -59,15 +63,17 @@
       </v-container>
     </banner>
   </div>
-  <v-container style="margin-bottom: 35px">
+  <v-container class="mb-9">
     <v-row class="flex-column align-center">
       <h2 class="text-h2">{{ $t('portfolio.more') }}</h2>
     </v-row>
-    <v-row>
+    <v-row class="align-center">
       <v-col
           v-for="repo in repos"
           :key="repo.id"
-          class="v-col-sm-6 v-col-md-4 v-col-lg-3">
+          cols="6"
+          sm="4"
+          md="3">
         <v-card
             :href="repo.html_url"
             target="_blank"
@@ -110,6 +116,16 @@
 </template>
 
 <script setup lang="ts">
+const rightClasses = [
+  'right',
+  'my-n11',
+  'my-sm-n12',
+  'my-md-n13',
+  'my-lg-n14',
+  'my-xl-n15',
+  'my-xxl-n16'
+]
+
 const gradients = {
   'JavaScript': ['#FFEB3B', '#FBC02D'],
   'TypeScript': ['#303F9F', '#1E88E5'],
@@ -165,20 +181,31 @@ const { data: repos } = await useFetch('https://api.github.com/users/theovidal/r
 </script>
 
 <style scoped lang="sass">
+@use 'vuetify/settings'
 $border-radius: 24px
 
 .v-card
   border-radius: $border-radius
   padding: 4px
-  div
-    background-color: white
+  > div
+    height: 100%
+    background-color: settings.$card-background
     border-radius: $border-radius - 2px
 
 .v-parallax.right
   clip-path: polygon(0 0, 100% 8%, 100% 92%, 0% 100%)
   z-index: 1
-  margin: -57px 0 -47px 0
+  .v-container .v-row .v-col .v-row
+    text-align: right
   &:last-child
-    margin-bottom: 0
+    margin-bottom: 0 !important
+
+@media screen and (max-width: 750px)
+  .portfolio-parallax
+    min-height: 550px !important
+
+@media screen and (min-width: 1200px)
+  .portfolio-parallax
+    max-height: 400px !important
 
 </style>

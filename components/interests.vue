@@ -1,9 +1,11 @@
 <template>
   <Transition>
-    <banner :src="interests[selected].banner">
-      <v-container>
+    <banner
+        id="interests-parallax"
+        :src="`/img/interests/${selected}-banner-min.jpg`">
+      <v-container class="pb-10">
         <v-row class="justify-center">
-          <h2 class="text-h2">{{ $t('home.interests.name') }}</h2>
+          <h2 class="text-h2 text-center">{{ $t('home.interests.name') }}</h2>
         </v-row>
         <v-row>
           <v-col
@@ -13,7 +15,7 @@
               v-ripple
               @click="selected = name">
             <v-avatar
-                :image="interest.image"
+                :image="`/img/interests/${name}-icon-min.jpg`"
                 size="160"
                 :alt="name"/><br>
             <h3
@@ -27,11 +29,16 @@
           </v-col>
         </v-row>
         <v-row>
-          <v-col class="text-right">
+          <v-col
+              cols="12"
+              sm="5"
+              class="text-center text-sm-right">
             <h1>{{ $t(`home.interests.${selected}.name`)}}</h1>
           </v-col>
-          <v-col>
-            <p>{{ $t(`home.interests.${selected}.description`)}}</p>
+          <v-col
+            cols="12"
+            sm="7">
+            <p class="text-justify">{{ $t(`home.interests.${selected}.description`)}}</p>
           </v-col>
         </v-row>
         <v-row class="justify-center flex-column flex-sm-row">
@@ -44,7 +51,7 @@
             <span>{{ value }}</span>
           </v-col>
         </v-row>
-        <v-row class="justify-end">
+        <v-row class="justify-center">
           <v-btn
               :to="interests[selected].link.local ? interests[selected].link.href : ''"
               :href="interests[selected].link.local ? '' : interests[selected].link.href"
@@ -61,12 +68,10 @@
 </template>
 
 <script setup lang="ts">
-const selected = ref('puzzles')
+const selected = ref('code')
 
 const interests = {
   code: {
-    image: '/img/code-image.png',
-    banner: '/img/code-banner.jpeg',
     link: {
       local: true,
       href: '/portfolio'
@@ -77,8 +82,6 @@ const interests = {
     }
   },
   climbing: {
-    image: '/img/climbing-image.jpeg',
-    banner: '/img/climbing-banner.jpeg',
     link: {
       local: false,
       href: 'https://highest.netlify.app'
@@ -88,9 +91,7 @@ const interests = {
       competitions: '2'
     }
   },
-  puzzles: {
-    image: '/img/cubing-image.jpeg',
-    banner: '/img/cubing-banner.jpeg',
+  cubing: {
     link: {
       local: false,
       href: 'https://t.me/cubcarre_bot'
@@ -112,5 +113,9 @@ const interests = {
 .v-enter-from,
 .v-leave-to
   opacity: 0
+
+@media screen and (min-width: 1150px)
+  #interests-parallax
+    max-height: 700px
 
 </style>

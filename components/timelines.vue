@@ -3,12 +3,13 @@
     <v-row
         v-for="timeline in timelines"
         :key="timeline.name"
-        class="flex-column align-center">
-      <h2 class="text-h2">{{ $t(timeline.name) }}</h2>
+        class="flex-column mt-8">
+      <h2 class="text-h4 text-sm-h2 text-center">{{ $t(timeline.name) }}</h2>
       <v-timeline
           line-thickness="5"
           line-color="#5ea7ef"
           density="comfortable"
+          class="pa-3"
           :side="timeline.side">
         <v-timeline-item
             v-for="item in timeline.data"
@@ -30,24 +31,24 @@
 </template>
 
 <script setup lang="ts">
-const curriculum = [
+const schooling = [
   {
     name: 'Lycée Carriat, Bourg-en-Bresse',
     date: '2018-2021',
-    description: 'home.curriculum.carriat',
-    image: '/img/carriat.jpeg'
+    description: 'home.schooling.carriat',
+    image: '/img/carriat-min.jpeg'
   },
   {
     name: 'Lycée du Parc, Lyon',
     date: '2021-2023',
-    description: 'home.curriculum.parc',
-    image: '/img/parc.jpg'
+    description: 'home.schooling.parc',
+    image: '/img/parc-min.jpg'
   },
   {
     name: 'ENSTA Paris, Palaiseau',
     date: '2023-',
-    description: 'home.curriculum.ensta',
-    image: '/img/ensta.jpeg'
+    description: 'home.schooling.ensta',
+    image: '/img/ensta-min.jpeg'
   }
 ]
 
@@ -56,21 +57,21 @@ const experiences = [
     name: 'DrInfo, Bourg-en-Bresse',
     date: '2017',
     description: 'home.experiences.drinfo',
-    image: '/img/drinfo.jpg'
+    image: '/img/drinfo-min.jpg'
   },
   {
     name: 'home.experiences.areasName',
     i18n: true,
     date: '2021, 2022, 2023',
     description: 'home.experiences.areas',
-    image: '/img/bourg-jasseron.jpg'
+    image: '/img/bourg-jasseron-min.jpg'
   }
 ]
 
 const timelines = [
   {
-    name: 'home.curriculum.name',
-    data: curriculum,
+    name: 'home.schooling.name',
+    data: schooling,
     side: 'end',
     text: 'left'
   },

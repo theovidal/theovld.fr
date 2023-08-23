@@ -3,20 +3,38 @@
       density="compact"
       scroll-behavior="elevate">
     <template #prepend>
-      <v-btn
-          v-for="link in links"
-          :key="link.name"
-          variant="text"
-          :to="link.to"
-          nuxt>
-        {{ $t(link.name) }}
-      </v-btn>
-      <v-btn
-        href="https://www.notion.so/theo-vidal/La-biblio-de-Th-o-f8fbe148bf2d4f9fa795ec553ec49eb0"
-        target="_blank"
-        append-icon="mdi-open-in-new">
-        {{ $t('resources.name') }}
-      </v-btn>
+      <v-menu>
+        <template #activator="{ props }">
+          <v-btn
+            variant="text"
+            icon="mdi-menu"
+            class="d-sm-none"
+            v-bind="props"/>
+        </template>
+        <v-list>
+          <v-list-item
+            v-for="link in links"
+            :key="link.name"
+            :to="link.external ? '' : link.to"
+            :href="link.external && link.to"
+            :target="link.external && '_blank'"
+            :title="$t(link.name)"
+            :append-icon="link.external ? 'mdi-open-in-new' : ''">
+          </v-list-item>
+        </v-list>
+      </v-menu>
+      <div class="d-none d-sm-block">
+        <v-btn
+            v-for="link in links"
+            :key="link.name"
+            variant="text"
+            :to="link.external ? '' : link.to"
+            :href="link.external && link.to"
+            :target="link.external && '_blank'"
+            :nuxt="!link.external">
+          {{ $t(link.name) }}
+        </v-btn>
+      </div>
     </template>
     <template #append>
       <v-col
@@ -38,7 +56,7 @@
 
 <script setup lang="ts">
 import { useLocale } from 'vuetify'
-import { i18n } from '@/plugins/i18n'
+import { i18n, locales } from '~/plugins/i18n'
 
 const links = [
   {
@@ -49,17 +67,25 @@ const links = [
     name: 'portfolio.name',
     to: '/portfolio'
   },
-  /*{
+  {
     name: 'resources.name',
-    to: '/resources'
-  }*/
+    external: true,
+    to: 'https://www.notion.so/theo-vidal/La-biblio-de-Th-o-f8fbe148bf2d4f9fa795ec553ec49eb0'
+  }
 ]
-
-const locales = ['fr', 'en', 'es']
 
 const { current } = useLocale()
 
-function changeLocale(locale : 'fr' | 'en' | 'es') {
+onMounted(() => {
+  for (const locale of window.navigator.languages) {
+    if (locales.includes(locale)) {
+      changeLocale(locale)
+      break
+    }
+  }
+})
+
+function changeLocale(locale) {
   current.value = locale
   i18n.global.locale.value = locale
 }
