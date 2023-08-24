@@ -22,18 +22,23 @@
 <script setup lang="ts">
 import { useTheme } from 'vuetify'
 
-useHead({
-  title: 'Théo Vidal'
-})
+const { t, locale } = useI18n()
 
+useHead({
+  title: 'Théo Vidal',
+  htmlAttrs: {
+    lang: locale
+  }
+})
 useSeoMeta({
   title: 'Théo Vidal',
+  description: t('description'),
   ogTitle: 'Théo Vidal',
   ogImage: '/img/me.jpg',
   twitterCard: 'summary',
 })
-const theme = useTheme()
 
+const theme = useTheme()
 onMounted(() => {
   const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
   theme.global.name.value = prefersDark ? 'dark' : 'light'
