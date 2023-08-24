@@ -2,12 +2,13 @@
   <div>
     <banner
       center
-      src="/img/alps-min.jpeg"
+      src="/img/alps-reduced.webp"
+      alt="Photo of the Alps as the banner"
       style="height: 103vh">
       <v-container>
         <v-row class="align-center flex-column text-center">
           <h1 class="text-h1">Théo Vidal</h1><br/>
-          <h3 class="text-subtitle-1">{{ $t('home.subtitle') }}</h3>
+          <span class="text-subtitle-1">{{ $t('home.subtitle') }}</span>
         </v-row>
         <v-row class="justify-center">
           <socials/>
@@ -21,15 +22,10 @@
       <v-row class="justify-center">
         <v-col
           cols="12"
-          sm="7">
-          <v-row
-            class="flex-column align-center justify-center"
-            style="height: 100%">
-            <v-col>
-              <h1 class="text-center">{{ $t('home.welcome') }}</h1>
-              <p class="text-justify">{{ $t('home.introduction') }}</p>
-            </v-col>
-          </v-row>
+          sm="7"
+          class="d-flex flex-column align-center justify-center">
+          <h2 class="text-center">{{ $t('home.welcome') }}</h2>
+          <p class="text-justify">{{ $t('home.introduction') }}</p>
         </v-col>
         <v-col
             order="first"
@@ -41,8 +37,8 @@
             size="200">
             <v-img
               cover
-              src="/img/me-min.jpeg"
-              alt="Profile picture"/>
+              src="/img/me-min.webp"
+              alt="My profile picture"/>
           </v-avatar>
         </v-col>
       </v-row>

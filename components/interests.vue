@@ -18,14 +18,14 @@
                 :image="`/img/interests/${name}-icon-min.jpg`"
                 size="160"
                 :alt="name"/><br>
-            <h3
-                v-if="selected !== name"
-            >
+            <span
+                class="text-h5"
+                v-if="selected !== name">
               {{ $t(`home.interests.${name}.name`) }}
-            </h3>
-            <v-icon
+            </span>
+            <i-mdi-chevron-down
                 v-else
-                icon="mdi-chevron-down"/>
+                width="24px"/>
           </v-col>
         </v-row>
         <v-row>
@@ -33,7 +33,7 @@
               cols="12"
               sm="5"
               class="text-center text-sm-right">
-            <h1>{{ $t(`home.interests.${selected}.name`)}}</h1>
+            <h4 class="text-h4">{{ $t(`home.interests.${selected}.name`)}}</h4>
           </v-col>
           <v-col
             cols="12"
@@ -58,7 +58,7 @@
               :target="interests[selected].link.local ? '' : '_blank'"
               :nuxt="interests[selected].link.local"
               class="gradient"
-              :append-icon="interests[selected].link.local ? 'mdi-chevron-right' : 'mdi-open-in-new'">
+              :append-icon="interests[selected].link.local ? IconChevronRight : IconOpenInNew">
             {{ $t(`home.interests.${selected}.link`) }}
           </v-btn>
         </v-row>
@@ -68,6 +68,8 @@
 </template>
 
 <script setup lang="ts">
+import IconOpenInNew from '~icons/mdi/open-in-new'
+import IconChevronRight from '~icons/mdi/chevron-right'
 const selected = ref('code')
 
 const interests = {

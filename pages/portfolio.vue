@@ -1,7 +1,8 @@
 <template>
   <banner
       center
-      src="/img/alps-min.jpeg">
+      src="/img/alps-reduced.webp"
+      alt="Photo of the Alps as the banner">
     <v-container>
       <v-row class="flex-column align-center">
         <h1 class="text-h1 text-center">{{ $t('portfolio.name') }}</h1>
@@ -15,7 +16,8 @@
       center
       class="portfolio-parallax"
       :class="i % 2 === 1 ? rightClasses : ''"
-      :src="`/img/portfolio/${project}-banner-min.png`">
+      :src="`/img/portfolio/${project}-banner-min.png`"
+      :alt="`Banner for project ${$t(`portfolio.${project}.name`)}`">
       <v-container>
         <v-row class="justify-center">
           <v-col sm="7">
@@ -56,7 +58,7 @@
                 rounded="0">
               <v-img
                   :src="`/img/portfolio/${project}-icon-min.png`"
-                  :alt="$t(`portfolio.${project}.name`)"/>
+                  :alt="`Icon for project ${$t(`portfolio.${project}.name`)}`"/>
             </v-avatar>
           </v-col>
         </v-row>
@@ -96,7 +98,7 @@
                   v-if="repo.stargazers_count > 0"
                   variant="outlined"
                   color="yellow"
-                  prepend-icon="mdi-star">{{ repo.stargazers_count }}</v-chip>
+                  :prepend-icon="IconStar">{{ repo.stargazers_count }}</v-chip>
             </v-card-actions>
           </div>
         </v-card>
@@ -106,8 +108,7 @@
       <v-btn
           href="https://github.com/theovidal"
           target="_blank"
-          prepend-icon="mdi-github"
-          append-icon="mdi-open-in-new"
+          :append-icon="IconOpenInNew"
           class="gradient">
         {{ $t('portfolio.see') }}
       </v-btn>
@@ -116,6 +117,13 @@
 </template>
 
 <script setup lang="ts">
+import IconGithub from '~icons/mdi/github'
+import IconWeb from '~icons/mdi/web'
+import IconDocument from '~icons/mdi/file-document-outline'
+import IconDiscord from '~icons/custom/discord'
+import IconStar from '~icons/mdi/star'
+import IconOpenInNew from '~icons/mdi/open-in-new'
+
 const rightClasses = [
   'right',
   'my-n11',
@@ -171,10 +179,10 @@ const showcase = {
 }
 
 const icons = {
-  github: 'mdi-github',
-  website: 'mdi-web',
-  docs: 'mdi-file-document-outline',
-  discord: 'mdi-message-outline'
+  github: IconGithub,
+  website: IconWeb,
+  docs: IconDocument,
+  discord: IconDiscord
 }
 
 const { data: repos } = await useFetch('https://api.github.com/users/theovidal/repos?sort=created&direction=desc&per_page=15')

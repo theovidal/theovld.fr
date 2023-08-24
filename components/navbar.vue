@@ -7,8 +7,9 @@
         <template #activator="{ props }">
           <v-btn
             variant="text"
-            icon="mdi-menu"
+            :icon="IconMenu"
             class="d-sm-none"
+            :aria-label="$t('menu')"
             v-bind="props"/>
         </template>
         <v-list>
@@ -19,7 +20,7 @@
             :href="link.external && link.to"
             :target="link.external && '_blank'"
             :title="$t(link.name)"
-            :append-icon="link.external ? 'mdi-open-in-new' : ''">
+            :append-icon="link.external ? IconOpenInNew : ''">
           </v-list-item>
         </v-list>
       </v-menu>
@@ -31,6 +32,7 @@
             :to="link.external ? '' : link.to"
             :href="link.external && link.to"
             :target="link.external && '_blank'"
+            :append-icon="link.external ? IconOpenInNew : ''"
             :nuxt="!link.external">
           {{ $t(link.name) }}
         </v-btn>
@@ -39,14 +41,14 @@
     <template #append>
       <v-col
         v-for="locale in locales"
-        :key="locale">
+        :key="locale.code">
         <v-btn
           variant="text"
-          :active="$i18n.locale === locale"
-          @click="changeLocale(locale)">
+          :active="currentLocale === locale.code"
+          @click="changeLocale(locale.code)">
           <img
-            :src="`/img/${locale}.png`"
-            :alt="`${locale}flag`"
+            :src="`/img/locales/${locale.code}-min.png`"
+            :alt="`${locale.code} flag`"
             height="20px">
         </v-btn>
       </v-col>
@@ -56,7 +58,11 @@
 
 <script setup lang="ts">
 import { useLocale } from 'vuetify'
-import { i18n, locales } from '~/plugins/i18n'
+import IconOpenInNew from '~icons/mdi/open-in-new'
+import IconMenu from '~icons/mdi/menu'
+
+const { locale: currentLocale, locales, setLocale } = useI18n()
+console.log(locales)
 
 const links = [
   {
@@ -74,19 +80,10 @@ const links = [
   }
 ]
 
-const { current } = useLocale()
-
-onMounted(() => {
-  for (const locale of window.navigator.languages) {
-    if (locales.includes(locale)) {
-      changeLocale(locale)
-      break
-    }
-  }
-})
+const { current: vuetifyLocale } = useLocale()
 
 function changeLocale(locale) {
-  current.value = locale
-  i18n.global.locale.value = locale
+  vuetifyLocale.value = locale
+  setLocale(locale)
 }
 </script>
