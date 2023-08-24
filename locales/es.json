@@ -1,0 +1,12 @@
+export default {
+    home: {
+        name: 'CV',
+        subtitle: 'Estudiante de ingeniería'
+    },
+    portfolio: {
+        name: 'Portfolio'
+    },
+    resources: {
+        name: 'Recursos'
+    }
+}
