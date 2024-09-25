@@ -39,10 +39,9 @@ useSeoMeta({
 })
 
 const theme = useTheme()
-onMounted(() => {
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
-  theme.global.name.value = prefersDark ? 'dark' : 'light'
-})
+const mode = useColorMode()
+
+onMounted(() => theme.global.name.value = mode.value)
 </script>
 
 <style lang="sass">
