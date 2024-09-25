@@ -1,19 +1,19 @@
 {
-    "name": "Théo Vidal",
-    "short_name": "Théo Vidal",
+    "name": "Th\u00e9o Vidal",
+    "short_name": "Th\u00e9o Vidal",
     "icons": [
         {
             "src": "/android-chrome-192x192.png",
-            "sizes":"192x192",
-            "type":"image/png"
+            "sizes": "192x192",
+            "type": "image/png"
         },
         {
-            "src":"/android-chrome-512x512.png",
-            "sizes":"512x512",
-            "type":"image/png"
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
         }
     ],
-    "theme_color":"#5ea7ef",
-    "background_color":"#5ea7ef",
-    "display":"standalone"
+    "theme_color": "#5ea7ef",
+    "background_color": "#5ea7ef",
+    "display": "standalone"
 }
