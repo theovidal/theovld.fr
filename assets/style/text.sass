@@ -1,0 +1,19 @@
+@font-face
+  font-display: swap !important
+
+a, a:visited
+  &:not(.v-btn, .v-card)
+    color: rgb(var(--v-theme-primary))
+
+li
+  list-style-type: '⏹'
+  list-style-position: inside
+  span
+    font-weight: bold
+
+li::marker
+  font-size: 20px
+  color: rgb(var(--v-theme-primary))
+
+.text-shadow
+  text-shadow: 1.1px 1.1px 4px black

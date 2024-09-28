@@ -1,0 +1,30 @@
+$gradient: linear-gradient(165deg, rgba(158,200,241,1) 0%, rgba(25,135,242,1) 100%) !important
+
+.translucent
+  background-color: rgba(var(--v-theme-opposite), 0.23) !important
+  -webkit-backdrop-filter: blur(5px) saturate(0.75)
+  backdrop-filter: blur(5px) saturate(0.75)
+
+.blur
+  -webkit-backdrop-filter: blur(5px)
+  backdrop-filter: blur(5px)
+
+.gradient
+  background: rgb(158,200,241) !important
+  background: $gradient
+
+.gradient-text
+  background-image: $gradient
+  background-clip: text
+  -webkit-background-clip: text
+  -webkit-text-fill-color: transparent
+
+.gradient-border
+  border-color: $gradient
+
+.box-shadow
+  &.v-theme--light
+    box-shadow: .25rem .25rem 1.25rem rgba(146,125,160,.2)!important
+
+  &.v-theme--dark
+    box-shadow: .25rem .25rem 1.25rem rgba(0,0,0,.2) !important

@@ -1,0 +1,20 @@
+.clip-right
+  clip-path: polygon(0 0, 100% 6%, 100% 94%, 0% 100%)
+  margin-top: -37px
+
+  @media screen and (min-width: 1200px)
+    clip-path: polygon(0 0, 100% 9%, 100% 91%, 0% 100%)
+
+  @media screen and (max-width: 600px)
+    clip-path: polygon(0 0, 100% 3%, 100% 97%, 0% 100%)
+
+.clip-top-right
+  clip-path: polygon(0 0, 100% 6%, 100% 100%, 0% 100%)
+  margin-top: -37px
+
+.w-screen
+  max-width: 100vw !important
+  &.v-container
+    padding: 0 !important
+    .v-row
+      margin: 0 !important

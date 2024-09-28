@@ -1,0 +1,16 @@
+@use 'vuetify/settings'
+@use 'color'
+
+.b-card
+  border-radius: 20px !important
+
+$border-radius: 32px
+
+.v-card.color-card
+  border-radius: $border-radius
+  background: color.$gradient
+  padding: 6px
+  > div.content
+    height: 100%
+    background-color: settings.$card-background
+    border-radius: $border-radius - 2px
