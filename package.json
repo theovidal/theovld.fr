@@ -9,18 +9,21 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@iconify-json/mdi": "^1.1.54",
+    "@iconify-json/mdi": "^1.1.68",
     "@nuxt/devtools": "latest",
     "@nuxtjs/i18n": "8.0.0-rc.3",
-    "@types/node": "^18.17.3",
-    "nuxt": "^3.6.5",
+    "@types/node": "^18.19.44",
+    "nuxt": "^3.12.4",
     "vite-plugin-vuetify": "^1.0.2"
   },
   "dependencies": {
-    "@mdi/font": "^7.2.96",
-    "sass": "^1.65.1",
-    "unplugin-icons": "^0.16.5",
-    "unplugin-vue-components": "^0.25.1",
-    "vuetify": "^3.3.13"
+    "@mdi/font": "^7.4.47",
+    "@nuxtjs/color-mode": "^3.4.2",
+    "@vueuse/core": "^10.11.1",
+    "dayjs": "^1.11.13",
+    "sass": "^1.77.8",
+    "unplugin-icons": "^0.16.6",
+    "unplugin-vue-components": "^0.25.2",
+    "vuetify": "^3.6.14"
   }
 }

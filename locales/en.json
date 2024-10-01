@@ -1,85 +1,169 @@
 {
-    "menu": "Navigation menu",
-    "description": "French student in engineering and physics, passionate about programming, climbing and AI",
+    "general": {
+        "menu": "Navigation menu",
+        "from": "From",
+        "date": "Date"
+    },
     "home": {
-        "name": "CV",
-        "subtitle": "Engineering student",
-        "welcome": "Welcome! 👋",
-        "introduction": "My name is Théo, I'm a french student in Palaiseau (in the Paris suburb). I've always been drawn to science and technology, thus I wish to participate to the creation of various and innovative projects. On my free time, I develop small projects and climb, among other occupations. Feel free to contact me for any piece of information, or simply talk!",
-        "schooling": {
-            "name": "My schooling",
-            "carriat": "General high school diploma, Mathematics, Engineering & Physics specialties\nExpert mathematics option, Euro section\nDistinction, with summa cum laude",
-            "parc": "MP2I & MPI* (Mathematics, Physics, Computer sciences) Preparatory class\nDistinction",
-            "ensta": "General engineer course"
+        "subtitle": "ENSTA Paris — Master of Engineering<br/>TAEP ENSTA Paris — Head of Business Development<br/>Self-taught Machine Learning"
+    },
+    "introduction": {
+        "title": "Welcome! 👋",
+        "text": "My name is Théo, and I am currently studying at ENSTA Paris, one of France's leading engineering schools. I've always been passionate about science and technology, and I aim to contribute to the creation of diverse and innovative projects. In my free time, I work on small projects and enjoy climbing, among other activities. Feel free to contact me for more information or just to chat!",
+        "resume": "My resume",
+        "picture": "My profile picture"
+    },
+    "experience": {
+        "title": "My experience",
+        "shortTitle": "Experience",
+        "description": "Click on an item to see its details!",
+        "view": "View on LinkedIn",
+
+        "types": {
+            "job": "Job",
+            "internship": "Internship",
+            "seasonal": "Seasonal",
+            "association": "Association",
+            "course": "Course",
+            "project": "Project",
+            "certificate": "Certificate"
         },
-        "experiences": {
-            "name": "My professional experiences",
-            "drinfo": "Year 10 (UK), ninth grade (US) internship - Computer and smartphone repair and maintenance, sales assistance",
-            "areasName": "Bourg-Jasseron rest area (A40 motorway)",
-            "areas": "Catering and services employee for HRC at Areas France - Selling at Columbus Café&Co, Hotel reception at Ibis, shelf restocking, cleaning"
+
+        "dataBootcamp": {
+            "title": "Hi! Paris Data Bootcamp",
+            "text": "Bootcamp on Data Science and ML",
+            "link": "https://www.smartcertificate.com/SmartDiploma/Default.aspx?1%7ca1fab41d-48af-4a96-8fb4-ddb1ea5eac4c%7cd66b8b91-b926-4d3b-aebe-6768f6a001d1#/"
         },
-        "interests": {
-            "name": "My interests",
-            "code": {
-                "name": "Programming",
-                "description": "I have had a passion for computing for a long time, and I create my own applications and websites since I'm twelve (2016) to put my ideas into practice without being dependent on others or inflexible tools. Since 2018, I publish some of them on Github to share my creations and open them to everyone's contribution. I have learnt OCaml and C in preparatory class, Javascript, Python, Ruby and Go by self-taught, and I use Jetbrains IDE on Linux. ",
-                "stats": {
-                    "repos": "GitHub repositories",
-                    "languages": "Practiced languages"
-                },
-                "link": "My projects"
-            },
-            "climbing": {
-                "name": "Climbing",
-                "description": "Since joining a club in 2018, I've enjoyed climbing routes and bouldering, indoor or outdoor, to challenge myself and clear my head. I complete this practice with various sport (weight training, cardio, mountain biking) so that I'm always in shape to progress.",
-                "stats": {
-                    "level": "Level (free climbing)",
-                    "competitions": "Competitions & contests"
-                },
-                "link": "My climbing app"
-            },
-            "cubing": {
-                "name": "Twisty puzzles",
-                "description": "I have learnt to solve the Rubik's Cube then various algorithms so I can solve it as fast as I can (Speed Cubing field), then I did the same with other puzzles. My ambition is to eventually participate at competitions, friendly exchange moments on this wide subject. From now on I solve puzzles without assistance to deeply understand their mechanism arouse my curiosity.",
-                "stats": {
-                    "number": "Different puzzles",
-                    "threeRecord": "3x3 record"
-                },
-                "link": "Stopwatch (Telegram Bot)"
-            }
+        "taep": {
+            "title": "TAEP, the Junior-Enterprise of ENSTA Paris",
+            "text": "Head of Business Development",
+            "link": "https://taep.fr"
+        },
+        "ensta": {
+            "title": "ENSTA Paris",
+            "text": "Master of Engineering",
+            "link": "https://www.linkedin.com/in/theovidal/details/education/"
+        },
+        "cambridge": {
+            "title": "Language skills - English",
+            "text": "Cambridge C1 Certificate",
+            "link": "https://www.linkedin.com/in/theovidal/details/certifications/"
+        },
+        "parc": {
+            "title": "Lycée du Parc, Lyon",
+            "text": "High-intensity \"preparatory class\" Maths, Physics, CS",
+            "link": "https://www.linkedin.com/in/theovidal/details/education/"
+        },
+        "areas": {
+            "title": "Columbus Café&Co et Ibis Hôtels",
+            "text": "Multi-purpose employee at a freeway service area"
+        },
+        "carriat": {
+            "title": "Lycée Carriat, Bourg-en-Bresse",
+            "text": "High school diploma ‒ Maths, Engineering Science",
+            "link": "https://www.linkedin.com/in/theovidal/details/education/"
         }
     },
     "portfolio": {
-        "name": "Portfolio",
-        "more": "More projects",
-        "see": "See all on GitHub",
-        "github": "GitHub",
-        "docs": "Documentation",
-        "website": "Website",
-        "discord": "Discord server",
+        "title": "My projects",
+        "shortTitle": "Portfolio",
+        "description": "Development and/or engineering projects, partially or totally using self-taught skills on my free time.",
+
+        "view": "View on GitHub",
+        "madeWith": "Made with:",
+        "challenges": "Challenges:",
+
+        "links": {
+            "github": "GitHub",
+            "docs": "Documentation",
+            "website": "Website",
+            "discord": "Discord server",
+            "demo": "Demonstration",
+            "open": "Open",
+            "see": "View",
+            "visit": "Visit"
+        },
+
+        "categories": {
+            "web": "Web Development",
+            "algorithmic": "Algorithmic / Machine Learning",
+            "engineering": "Engineering and Physics",
+            "utils": "Utils"
+        },
 
         "highest": {
-            "name": "Highest",
-            "short": "Climbing web app",
-            "description": "At the crossroads of my passions for IT and climbing, this specific tool for climbers serves to organize one's routes, their progression on it and their goals. QR-Codes can be printed in climbing gyms for a fast addition."
+            "title": "Highest",
+            "text": "Web application for climbing enthusiasts",
+            "description": "A web application that allows climbers to log their routes and track their progress, inspired by my passion for climbing.",
+            "challenges": "Optimization and deployment of a complete web application"
         },
         "bop": {
-            "name": "BecauseOfProg",
-            "short": "Blog & developers team",
-            "description": "The BecauseOfProg is a team founded in 2017 by myself and two friends to create together and share our discoveries on IT, digital and programming. We are also maintaining a small community on our Discord server."
+            "title": "BecauseOfProg",
+            "text": "Blog & Development Team",
+            "description": "We are a group of IT enthusiasts brought together to create projects and share our discoveries.",
+            "challenges": "Writing popularization articles, developing a blog and managing projects since I'm 14"
         },
         "mapping": {
-            "name": "3D Mapping",
-            "short": "3D cartography platform",
-            "description": "A classmate and I have chosen this subject for our high school engineering project. A 3D-printed platform equipped with a LiDAR sensor realises a live-transmitted scan of a room. Calculations and surface rebuilding are then practicable on this raw data."
+            "title": "Mapping 3D",
+            "text": "3D mapping platform",
+            "description": "A 3D-printed platform equipped with a LiDAR sensor for room modeling. Real-time scan transmission to a website, with options for calculations and surface reconstruction.",
+            "challenges": "Component interfacing, radio communication, and 3D modeling"
         },
         "tipe": {
-            "name": "Earthquake reconnaissance drone",
-            "short": "TIPE 2023 - The City",
-            "description": "I have designed for my scientific preparatory class trajectory planification algorithms for drones so they can explore zones devastated by an earthquake, taking into account topography and population density. The goal was to realise an efficient scan as fast as possible so emergency services on ground are relieved, and precious data on the condition of the premises and the people to be rescued is transmitted to them."
+            "title": "Earthquake reconnaissance drone",
+            "text": "Path tracing algorithms over a urban environment",
+            "description": "Trajectory planification algorithms for drones to explore zones devastated by an earthquake, taking into account topography and population density.",
+            "challenges": "Applying a rigorous scientific method with multiple different algorithms and summarizing the results"
+        },
+        "vision": {
+            "title": "MATLAB Computer vision",
+            "text": "Live red traffic lights detection",
+            "description": "Efficient algorithm using color and shape data from the image to detect red traffic lights.",
+            "challenges": "Use of various color spaces, advanced research of maximum efficiency for fast, reliable results"
+        },
+        "all": "All projects and repositories"
+    },
+    "interests": {
+        "title": "My interests",
+        "shortTitle": "Interests",
+        "code": {
+            "name": "Programming",
+            "description": "I have had a passion for computing for a long time, and I create my own applications and websites since I'm twelve (2016) to put my ideas into practice without being dependent on others or inflexible tools. Since 2018, I publish some of them on Github to share my creations and open them to everyone's contribution. I have learnt OCaml and C in preparatory class, Javascript, Python, Ruby and Go by self-taught, and I use Jetbrains IDE on Linux. ",
+            "stats": {
+                "repos": "GitHub repositories",
+                "languages": "Practiced languages"
+            },
+            "link": "My projects"
+        },
+        "climbing": {
+            "name": "Climbing",
+            "description": "Since joining a club in 2018, I've enjoyed climbing routes and bouldering, indoor or outdoor, to challenge myself and clear my head. I complete this practice with various sport (weight training, cardio, mountain biking) so that I'm always in shape to progress.",
+            "stats": {
+                "level": "Level (free climbing)",
+                "competitions": "Competitions & contests"
+            },
+            "link": "My climbing app"
+        },
+        "cubing": {
+            "name": "Twisty puzzles",
+            "description": "I have learnt to solve the Rubik's Cube then various algorithms so I can solve it as fast as I can (Speed Cubing field), then I did the same with other puzzles. My ambition is to eventually participate at competitions, friendly exchange moments on this wide subject. From now on I solve puzzles without assistance to deeply understand their mechanism arouse my curiosity.",
+            "stats": {
+                "number": "Different puzzles",
+                "threeRecord": "3x3 record"
+            },
+            "link": "My stopwatch"
         }
     },
+    "contact": {
+        "title": "Let's meet!",
+        "shortTitle": "Contact",
+        "link": "https://tally.so/r/3ELgd2"
+    },
     "resources": {
-        "name": "Resources"
+        "shortTitle": "Resources"
+    },
+     "link": {
+        "redirecting": "Redirecting...",
+        "manual": "If you are not redirected automatically, click on the link bellow:"
     }
 }

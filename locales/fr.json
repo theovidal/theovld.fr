@@ -1,85 +1,169 @@
 {
-    "menu": "Menu de navigation",
-    "description": "Étudiant en ingénierie et physique, passionné par la programmation, l'escalade et l'IA",
+    "general": {
+        "menu": "Menu de navigation",
+        "from": "Depuis",
+        "date": "Date"
+    },
     "home": {
-        "name": "CV",
-        "subtitle": "Étudiant ingénieur",
-        "welcome": "Bienvenue! 👋",
-        "introduction": "Je m'appelle Théo, je suis actuellement étudiant en école d'ingénieur à Palaiseau (banlieue parisienne). J'ai toujours été attiré par les sciences et la technologie, je souhaite ainsi participer à la création de projets variés et innovants. Sur mon temps libre, je développe des petits projets et fais de l'escalade, parmis d'autres occupations. N'hésitez-pas à me contacter pour toute information, ou simplement pour discuter!",
-        "schooling": {
-            "name": "Mon parcours scolaire",
-            "carriat": "Baccalauréat général, spécialités Mathématiques, Sciences de l'ingénieur & Sciences physiques\nOption Mathématiques Expertes, Section européenne\nMention très bien avec les félicitations du jury",
-            "parc": "Classes préparatoires MP2I et MPI* (Mathématiques, Physique, Informatique)\nMention très bien",
-            "ensta": "Formation d'ingénieur généraliste"
+        "subtitle": "ENSTA Paris ‒ Diplôme d'ingénieur<br/>TAEP ENSTA Paris ‒ Responsable de Développement Commercial<br/>Machine Learning en auto-didacte"
+    },
+    "introduction": {
+        "title": "Bienvenue! 👋",
+        "text": "Je m'appelle Théo, je suis actuellement étudiant en école d'ingénieur à l'ENSTA Paris. J'ai toujours été attiré par les sciences et la technologie, je souhaite ainsi participer à la création de projets variés et innovants. Sur mon temps libre, je développe des petits projets et fais de l'escalade, parmis d'autres occupations. N'hésitez-pas à me contacter pour toute information, ou simplement pour discuter!",
+        "resume": "Mon CV",
+        "picture": "Ma photo de profil"
+    },
+    "experience": {
+        "title": "Mon parcours",
+        "shortTitle": "Parcours",
+        "description": "Cliquez sur un élément pour voir les détails!",
+        "view": "Voir sur LinkedIn",
+
+        "types": {
+            "job": "Emploi",
+            "internship": "Stage",
+            "seasonal": "Emploi saisonnier",
+            "association": "Association",
+            "course": "Formation",
+            "project": "Projet",
+            "certificate": "Certification"
         },
-        "experiences": {
-            "name": "Mes expériences professionnelles",
-            "drinfo": "Stage de 3ème - Réparation et maintenance d'ordinateurs et de téléphones portables, assistance à la vente",
-            "areasName": "Aire de Bourg-Jasseron (autoroute A40)",
-            "areas": "Employé de restauration et services pour HRC chez Areas France - Vente chez Columbus Café&Co, Réception hôtelière chez Ibis, mise en rayon, ménage"
+
+        "dataBootcamp": {
+            "title": "Hi! Paris Data Bootcamp",
+            "text": "Bootcamp sur la Data Science et le ML",
+            "link": "https://www.smartcertificate.com/SmartDiploma/Default.aspx?1%7ca1fab41d-48af-4a96-8fb4-ddb1ea5eac4c%7cd66b8b91-b926-4d3b-aebe-6768f6a001d1#/"
         },
-        "interests": {
-            "name": "Mes centres d'intérêt",
-            "code": {
-                "name": "Programmation informatique",
-                "description": "Passionné de longue date par l'informatique, je réalise mes propres applications et sites web depuis mes 12 ans (2016) pour concrétiser mes idées sans être dépendant d'autrui ou d'outils inflexibles. Je publie depuis 2018 certains d'entre eux sur GitHub pour partager mes créations et les ouvrir à la contribution de tous. J'ai appris les langages OCaml et C en classe préparatoire, Javascript, Python, Ruby et Go en autodidacte, et utilise les IDE Jetbrains sur Linux. ",
-                "stats": {
-                    "repos": "Dépôts GitHub",
-                    "languages": "Langages pratiqués"
-                },
-                "link": "Mes projets"
-            },
-            "climbing": {
-                "name": "Escalade",
-                "description": "Depuis 2018 et mon inscription en club, j'apprécie arpenter des voies de difficulté ou de bloc, en intérieur ou en extérieur, pour me défier et me vider la tête. Je complète cette pratique par des sports variés (musculation, cardio, VTT) pour toujours avoir une forme me permettant de progresser.",
-                "stats": {
-                    "level": "Niveau (tête)",
-                    "competitions": "Compétitions & contests"
-                },
-                "link": "Mon application d'escalade"
-            },
-            "cubing": {
-                "name": "Casses-têtes \"twisty\"",
-                "description": "J'ai appris à résoudre le Rubik's Cube puis appris divers algorithmes afin de le résoudre le plus rapidement possible (discipline du Speed Cubing), puis j'ai fait de même avec d'autres casses-têtes. J'ai à terme l'ambition de participer à des compétitions, moments conviviaux d'échange sur ce vaste domaine. Je résout désormais des puzzles sans assistance pour comprendre leur mécanisme en profondeur et éveiller ma curiosité.",
-                "stats": {
-                    "number": "Puzzles différents",
-                    "threeRecord": "Record au 3x3"
-                },
-                "link": "Chronomètre (Bot Telegram)"
-            }
+        "taep": {
+            "title": "TAEP, la Junior-Entreprise d'ENSTA Paris",
+            "text": "Responsable de Développement Commercial",
+            "link": "https://taep.fr"
+        },
+        "ensta": {
+            "title": "ENSTA Paris",
+            "text": "Diplôme d'ingénieur",
+            "link": "https://www.linkedin.com/in/theovidal/details/education/"
+        },
+        "cambridge": {
+            "title": "Compétences linguistiques - Anglais",
+            "text": "Certificat Cambridge C1",
+            "link": "https://www.linkedin.com/in/theovidal/details/certifications/"
+        },
+        "parc": {
+            "title": "Lycée du Parc, Lyon",
+            "text": "Classe préparatoire Mathématiques, Physique, Informatique",
+            "link": "https://www.linkedin.com/in/theovidal/details/education/"
+        },
+        "areas": {
+            "title": "Columbus Café&Co et Ibis Hôtels",
+            "text": "Employé polyvalent sur aire d'autoroute"
+        },
+        "carriat": {
+            "title": "Lycée Carriat, Bourg-en-Bresse",
+            "text": "Baccalauréat Général ‒ Mathématiques, Sciences de l'ingénieur",
+            "link": "https://www.linkedin.com/in/theovidal/details/education/"
         }
     },
     "portfolio": {
-        "name": "Portfolio",
-        "more": "Davantage de projets",
-        "see": "Tout voir sur GitHub",
-        "github": "GitHub",
-        "docs": "Documentation",
-        "website": "Site Internet",
-        "discord": "Serveur Discord",
+        "title": "Mes projets",
+        "shortTitle": "Portfolio",
+        "description": "Projets de développement et/ou d'ingénierie, utilisant partiellement ou totalement des compétences développées en auto-didacte sur mon temps libre.",
+
+        "view": "Voir sur GitHub",
+        "madeWith": "Réalisé avec",
+        "challenges": "Défis :",
+
+        "links": {
+            "github": "GitHub",
+            "docs": "Documentation",
+            "website": "Site Internet",
+            "demo": "Démonstration",
+            "open": "Ouvrir",
+            "see": "Voir",
+            "visit": "Visiter",
+            "discord": "Serveur Discord"
+        },
+
+        "categories": {
+            "web": "Développement Web",
+            "algorithmic": "Algorithmique / Machine Learning",
+            "engineering": "Ingénierie et Physique",
+            "utils": "Utilitaires"
+        },
 
         "highest": {
-            "name": "Highest",
-            "short": "Application web d'escalade",
-            "description": "Au croisement de mes passions pour l'escalade et le développement informatique, cet outil spécial pour le grimpeur permet d'organiser ses voies, ses progressions dessus et ses objectifs. Des QR-Code peuvent être imprimés dans les salles d'escalade pour un ajout rapide."
+            "title": "Highest",
+            "text": "Application web d'escalade",
+            "description": "Application web pour grimpeurs afin d'enregistrer ses voies et sa progression, motivée par ma passion pour l'escalade",
+            "challenges": "Optimisation et déploiement d'une application web complète"
         },
         "bop": {
-            "name": "BecauseOfProg",
-            "short": "Blog & Équipe de développeurs",
-            "description": "La BecauseOfProg est une équipe fondée en 2017 par moi-même et deux amis pour créer ensemble et partager nos découvertes sur l'informatique, le numérique et la programmation informatique. Nous entretenons également une petite communauté sur notre serveur Discord."
+            "title": "BecauseOfProg",
+            "text": "Blog & Équipe de développeurs",
+            "description": "Nous sommes des passionnés d'informatique réunis ensemble pour créer et partager nos découvertes.",
+            "challenges": "Écriture d'articles de vulgarisation, développement d'un blog et gestion de projets depuis mes 14 ans"
         },
         "mapping": {
-            "name": "Mapping 3D",
-            "short": "Plateforme de cartographie 3D",
-            "description": "Avec un camarade, nous avons choisi ce sujet pour notre projet de Sciences de l'Ingénieur de Terminale pour le Baccalauréat. Une plateforme imprimée en 3D et équipée d'un capteur LiDAR réalise un scan d'une pièce retranscrit en direct sur un site Internet. Des calculs et reconstructions de surface sont ensuite réalisables à partir de ces données brutes."
+            "title": "Mapping 3D",
+            "text": "Plateforme de cartographie 3D",
+            "description": "Plateforme imprimée en 3D et équipée d'un capteur LiDAR pour modéliser une pièce. Retranscris en direct sur un site Internet et possibilités de calculs et reconstructions de surface.",
+            "challenges": "Interface avec les composants, communication radio, modélisation 3D"
         },
         "tipe": {
-            "name": "Drone de reconnaissance pour séisme",
-            "short": "TIPE 2023 - La Ville",
-            "description": "Pour mon projet de classe préparatoire scientifique, j'ai conçu des algorithmes de planification de trajectoire pour des drones afin d'explorer des zones sinistrées par un séisme, en tenant compte de la topographie et des densités de population. L'objectif était de réaliser un balayage efficace et le plus rapide possible pour soulager les secours sur le terrain et fournir de précieuses informations sur l'état des lieux et les personnes à sauver."
+            "title": "Drone de reconnaissance pour séisme",
+            "text": "Algorithme de tracé de trajectoires en milieu urbain",
+            "description": "Algorithmes de planification de trajectoire pour des drones afin d'explorer des zones sinistrées par un séisme, en tenant compte de la topographie et des densités de population.",
+            "challenges": "Application d'une démarche scientifique rigoureuse avec de multiples algorithmes différents et résumé des résultats"
+        },
+        "vision": {
+            "title": "Vision par ordinateur sur MATLAB",
+            "text": "Détection de feux rouges en direct",
+            "description": "Algorithme efficace utilisant les données de couleur et de forme de l'image pour détecter les feux rouges.",
+            "challenges": "Utilisation des espaces de couleur, recherche poussée de l'efficacité maximale pour un résultat rapide et fiable"
+        },
+        "all": "Tous les projets et dépôts"
+    },
+    "interests": {
+        "title": "Mes centres d'intérêt",
+        "shortTitle": "Intérêts",
+        "code": {
+            "name": "Programmation informatique",
+            "description": "Passionné de longue date par l'informatique, je réalise mes propres applications et sites web depuis mes 12 ans (2016) pour concrétiser mes idées. Je publie depuis 2018 certains d'entre eux sur GitHub pour partager mes créations et les ouvrir à la contribution de tous. J'ai appris les langages OCaml et C en classe préparatoire, Javascript, Python, Ruby et Go en autodidacte, et utilise les IDE Jetbrains sur Linux. ",
+            "stats": {
+                "repos": "Dépôts GitHub",
+                "languages": "Langages pratiqués"
+            },
+            "link": "Mes projets"
+        },
+        "climbing": {
+            "name": "Escalade",
+            "description": "Depuis 2018 et mon inscription en club, j'apprécie arpenter des voies de difficulté ou de bloc, en intérieur ou en extérieur, pour me défier et me vider la tête. Je complète cette pratique par des sports variés (musculation, cardio, VTT) pour toujours avoir une forme me permettant de progresser. Je participe également à des compétitions universitaires ainsi qu'à des sorties de groupe organisées par l'association d'escalade de l'ENSTA Paris.",
+            "stats": {
+                "level": "Niveau (tête)",
+                "competitions": "Compétitions & contests"
+            },
+            "link": "Mon application d'escalade"
+        },
+        "cubing": {
+            "name": "Casses-têtes \"twisty\"",
+            "description": "J'ai appris à résoudre le Rubik's Cube puis mémorisé divers algorithmes pour le faire de plus en plus rapidement (discipline du Speed Cubing) et j'ai poursuivi avec d'autres casses-têtes. J'ai à terme l'ambition de participer à des compétitions, moments conviviaux d'échange sur ce vaste domaine. Je résout également des puzzles plus exotiques sans aide pour comprendre leur mécanisme en profondeur et éveiller ma curiosité.",
+            "stats": {
+                "number": "Puzzles différents",
+                "threeRecord": "Record au 3x3"
+            },
+            "link": "Chronomètre (Bot Telegram)"
         }
     },
+    "contact": {
+        "title": "Rencontrons-nous!",
+        "shortTitle": "Contact",
+        "link": "https://tally.so/embed/mD5YDR?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+    },
     "resources": {
-        "name": "Ressources"
+        "shortTitle": "Ressources"
+    },
+    "link": {
+        "redirecting": "Redirection...",
+        "manual": "Si vous n'êtes pas redirigé automatiquement, cliquez ci-dessous :"
     }
 }

@@ -1,0 +1,104 @@
+{
+    "menu": "Navigation menu",
+    "description": "French student in engineering and physics, passionate about programming, climbing and AI",
+    "home": {
+        "name": "CV",
+        "subtitle": "ENSTA Paris — Master of Engineering<br/>TAEP ENSTA Paris — Business Development Manager<br/>Self-taught Machine Learning",
+        "welcome": "Welcome! 👋",
+        "introduction": "My name is Théo, I am currently studying at ENSTA Paris, a French Ivy League school. I've always been drawn to science and technology, thus I wish to participate to the creation of various and innovative projects. On my free time, I develop small projects and climb, among other occupations. Feel free to contact me for any piece of information, or simply talk!",
+        "schooling": {
+            "name": "My schooling",
+            "ensta": {
+                "name": "Engineering Curricula ‒ ENSTA Paris",
+                "date": "2023 ‒ 2026",
+                "text": "<a href=\"https://www.ensta-paris.fr/en/node\" target=\"_blank\">ENSTA Paris</a>, founder member of <a href=\"https://www.ip-paris.fr/en\"  target=\"_blank\">Institute Polytechnique of Paris</a>, ranked 2<sup>nd</sup> school in the French Ivy League and First in environment, teaches courses in various scientific fields for strategic areas : sustainable mobility, energy, defense.<br><br>I take part in varied associations :<br><ul><li><a href=\"https://taep.fr\" target=\"_blank\">TAEP, the Junior-Enterprise of ENSTA Paris</a> : we carry out missions for companies in the ENSTA area of expertise : applied mathematics, mechanics, computer science</li><li><a href=\"https://forumaster.fr\" target=\"_blank\">Forum ASTER</a> : yearly meeting between IP Paris students and environmentally engaged corporations</li><li><a href=\"https://data-ensta.fr\" target=\"_blank\">Computer Science</a> : web infrastructure maintenance for school associations, web development training</li></ul>"
+            },
+            "parc": {
+                "name": "High-intensity preparatory class ‒ Lycée du Parc, Lyon",
+                "date": "2021 ‒ 2023",
+                "text": "Classes designed to prepare students for prestigious schools (French Ivy League) ‒ Mathematics, Physics, Computer Science<br>Distinction"
+            },
+            "carriat": {
+                "name": "High school diploma",
+                "date": "2021",
+                "text": "Mathematics, Engineering Science, Physics\nDistinction, with summa cum laude"
+            }
+        },
+        "experiences": {
+            "name": "My professional experience",
+            "taep": {
+                "name": "Business Development Manager ‒ TAEP, the Junior-Enterprise of ENSTA Paris",
+                "date": "November 2023 ‒ Ongoing",
+                "text": "TAEP calls on highly-qualified ENSTA students to carry out missions for companies in applied mathematics (optimisation, forecast), mechanics (design, simulation, sizing) and computer sciences (web and software development, AI, data science, cybersecurity).<br><br>As Business Development Manager, on top of missions monitoring and companies support, I manage a team of seven people to realize projects for the structure : events, communication, partnerships.<br><br>To learn more, visit <a href=\"https://taep.fr\"  target=\"_blank\">www.taep.fr</a> !"
+            },
+            "areas": {
+                "name": "Seasonal work ‒ Motorway rest area",
+                "date": "Summer 2021, 2022, 2023",
+                "text": "Versatile employee : barista and seller in a coffee shop ‒ receptionist at the hotel ‒ shelf restocking ‒ cleaning"
+            }
+        },
+        "interests": {
+            "name": "My interests",
+            "code": {
+                "name": "Programming",
+                "description": "I have had a passion for computing for a long time, and I create my own applications and websites since I'm twelve (2016) to put my ideas into practice without being dependent on others or inflexible tools. Since 2018, I publish some of them on Github to share my creations and open them to everyone's contribution. I have learnt OCaml and C in preparatory class, Javascript, Python, Ruby and Go by self-taught, and I use Jetbrains IDE on Linux. ",
+                "stats": {
+                    "repos": "GitHub repositories",
+                    "languages": "Practiced languages"
+                },
+                "link": "My projects"
+            },
+            "climbing": {
+                "name": "Climbing",
+                "description": "Since joining a club in 2018, I've enjoyed climbing routes and bouldering, indoor or outdoor, to challenge myself and clear my head. I complete this practice with various sport (weight training, cardio, mountain biking) so that I'm always in shape to progress.",
+                "stats": {
+                    "level": "Level (free climbing)",
+                    "competitions": "Competitions & contests"
+                },
+                "link": "My climbing app"
+            },
+            "cubing": {
+                "name": "Twisty puzzles",
+                "description": "I have learnt to solve the Rubik's Cube then various algorithms so I can solve it as fast as I can (Speed Cubing field), then I did the same with other puzzles. My ambition is to eventually participate at competitions, friendly exchange moments on this wide subject. From now on I solve puzzles without assistance to deeply understand their mechanism arouse my curiosity.",
+                "stats": {
+                    "number": "Different puzzles",
+                    "threeRecord": "3x3 record"
+                },
+                "link": "My stopwatch"
+            }
+        }
+    },
+    "portfolio": {
+        "name": "Portfolio",
+        "more": "More projects",
+        "see": "See all on GitHub",
+        "github": "GitHub",
+        "docs": "Documentation",
+        "website": "Website",
+        "discord": "Discord server",
+
+        "highest": {
+            "name": "Highest",
+            "short": "Climbing web app",
+            "description": "At the crossroads of my passions for IT and climbing, this specific tool for climbers serves to organize one's routes, their progression on it and their goals. QR-Codes can be printed in climbing gyms for a fast addition."
+        },
+        "bop": {
+            "name": "BecauseOfProg",
+            "short": "Blog & developers team",
+            "description": "The BecauseOfProg is a team founded in 2017 by myself and two friends to create together and share our discoveries on IT, digital and programming. We are also maintaining a small community on our Discord server."
+        },
+        "mapping": {
+            "name": "3D Mapping",
+            "short": "3D cartography platform",
+            "description": "A 3D-printed platform and equipped with a LiDAR sensor to model a room. Live-transmitted scan on a website and options to perform calculations and surface rebuilding."
+        },
+        "tipe": {
+            "name": "Earthquake reconnaissance drone",
+            "short": "TIPE 2023 - The City",
+            "description": "Trajectory planification algorithms for drones so they can explore zones devastated by an earthquake, taking into account topography and population density. The goal was to realise an efficient scan as fast as possible so emergency services on ground are relieved, and precious data on the condition of the premises and the people to be rescued is transmitted to them."
+        }
+    },
+    "resources": {
+        "name": "Resources"
+    }
+}
