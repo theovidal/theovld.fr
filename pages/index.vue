@@ -30,12 +30,12 @@
           class="d-flex flex-column align-center justify-center">
           <h2 class="text-center mb-2">{{ $t('introduction.title') }}</h2>
           <p class="text-justify mb-4">{{ $t('introduction.text') }}</p>
-          <v-btn
+          <!--<v-btn
             variant="outlined"
             :href="`/cv_${locale}.pdf`"
             target="_blank"
             :text="$t('introduction.resume')"
-          />
+          />-->
         </v-col>
         <v-col
             order="first"
