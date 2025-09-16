@@ -1,12 +1,18 @@
 export default {
-  dataBootcamp: {
-    is: 'course',
-    beginning: new Date('2024.08'),
+  lmps: {
+    is: 'research-internship',
+    beginning: new Date('2025.09'),
+    showFrom: true,
+  },
+  fiuba: {
+    is: 'research-internship',
+    beginning: new Date('2025.05'),
+    end: new Date('2025.08')
   },
   taep: {
     is: 'association',
-    showFrom: true,
-    beginning: new Date('2023.11')
+    beginning: new Date('2023.11'),
+    end: new Date('2025.03')
   },
   ensta: {
     is: 'course',
@@ -21,11 +27,6 @@ export default {
     is: 'course',
     beginning: new Date('2021.09'),
     end: new Date('2023.07')
-  },
-  areas: {
-    is: 'seasonal',
-    beginning: new Date('2021.07'),
-    end: new Date('2021.08')
   },
   carriat: {
     is: 'course',

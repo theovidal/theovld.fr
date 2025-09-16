@@ -5,11 +5,11 @@
         "date": "Date"
     },
     "home": {
-        "subtitle": "ENSTA Paris — Master of Engineering<br/>TAEP ENSTA Paris — Head of Business Development<br/>Self-taught Machine Learning"
+        "subtitle": "ENSTA Paris — Master of Engineering<br/>Laboratory of Mechanics Paris-Saclay (LMPS) — Research intern<br/>Self-taught Machine Learning"
     },
     "introduction": {
         "title": "Welcome! 👋",
-        "text": "My name is Théo, and I am currently studying at ENSTA Paris, one of France's leading engineering schools. I've always been passionate about science and technology, and I aim to contribute to the creation of diverse and innovative projects. In my free time, I work on small projects and enjoy climbing, among other activities. Feel free to contact me for more information or just to chat!",
+        "text": "My name is Théo, and I am currently studying at ENSTA Paris, one of France's leading engineering schools. I am currently achieving a gap-year internship at the Laboratory of Mechanics Paris-Saclay (LMPS), working on the DREAM-ON structural health monitoring project. I've always been passionate about science and technology, and I aim to contribute to the creation of diverse and innovative projects. In my free time, I work on small projects and enjoy climbing, among other activities. Feel free to contact me for more information or just to chat!",
         "resume": "My resume",
         "picture": "My profile picture"
     },
@@ -26,13 +26,19 @@
             "association": "Association",
             "course": "Course",
             "project": "Project",
-            "certificate": "Certificate"
+            "certificate": "Certificate",
+            "research-internship": "Research Internship"
         },
 
-        "dataBootcamp": {
-            "title": "Hi! Paris Data Bootcamp",
-            "text": "Bootcamp on Data Science and ML",
-            "link": "https://www.smartcertificate.com/SmartDiploma/Default.aspx?1%7ca1fab41d-48af-4a96-8fb4-ddb1ea5eac4c%7cd66b8b91-b926-4d3b-aebe-6768f6a001d1#/"
+        "lmps": {
+            "title": "Laboratory of Mechanics Paris-Saclay (LMPS) - Paris-Saclay University",
+            "text": "DREAM-ON project: structural health monitoring augmented by AI",
+            "link": "https://erc-dreamon.ens-paris-saclay.fr/en"
+        },
+        "fiuba": {
+            "title": "Fluid Dynamics laboratory - University of Buenos Aires (UBA), Argentina \uD83C\uDDE6\uD83C\uDDF7",
+            "text": "Study of microfluidic channels",
+            "link": "https://typst.app/project/r7jusr0D2XucPEEbKogQUm"
         },
         "taep": {
             "title": "TAEP, the Junior-Enterprise of ENSTA Paris",
@@ -86,8 +92,10 @@
 
         "categories": {
             "web": "Web Development",
-            "algorithmic": "Algorithmic / Machine Learning",
-            "engineering": "Engineering and Physics",
+            "algorithmic": "Algorithmic",
+            "ml": "Machine Learning",
+            "physics": "Physics and Simulation",
+            "engineering": "Engineering",
             "utils": "Utils"
         },
 
@@ -104,8 +112,8 @@
             "challenges": "Writing popularization articles, developing a blog and managing projects since I'm 14"
         },
         "mapping": {
-            "title": "Mapping 3D",
-            "text": "3D mapping platform",
+            "title": "3D cartography platform",
+            "text": "3D cartography platform",
             "description": "A 3D-printed platform equipped with a LiDAR sensor for room modeling. Real-time scan transmission to a website, with options for calculations and surface reconstruction.",
             "challenges": "Component interfacing, radio communication, and 3D modeling"
         },
@@ -120,6 +128,36 @@
             "text": "Live red traffic lights detection",
             "description": "Efficient algorithm using color and shape data from the image to detect red traffic lights.",
             "challenges": "Use of various color spaces, advanced research of maximum efficiency for fast, reliable results"
+        },
+        "aierolab": {
+            "title": "AIerolab",
+            "text": "Airfoil modeling using AI and aerodynamics experiments",
+            "description": "Simulating the flow around an airfoil using Machine Learning, and printing a 3D model to characterize its aerodynamics in a wind tunnel",
+            "challenges": "Developing a neural network for physics, rigorously conducting experiments"
+        },
+        "ipt": {
+            "title": "Physics tournament - Honey characterization",
+            "text": "Physical investigation on honey oscillations",
+            "description": "Physics experiments and analysis to characterize the oscillations of honey, in the context of the International Physicists' Tournament (IPT)",
+            "challenges": "Autonomously conducting my first research methodology"
+        },
+        "lbm": {
+            "title": "LBM for the backward-facing step",
+            "text": "Lattice Boltzmann simulation",
+            "description": "Lattice-Boltzmann simulation of the backward-facing step, exploring the influence of parameters and comparing to bibliography",
+            "challenges": "Coding from scratch a complex fluid mechanics simulation, rigorously analyzing the results"
+        },
+        "hickathon": {
+            "title": "Hi!ckathon - Hi!Paris hackathon",
+            "text": "Hackathon - Water shortages prediction",
+            "description": "A 48-hours Machine Learning competition to predict water shortages during summer months, by teams of 5-8 and using a large database",
+            "challenges": "Applying prior ML knowledge to a real business case, working with many people on a ML project"
+        },
+        "joyero": {
+            "title": "Joyero (MIT Hackathon)",
+            "text": "Hackathon - AI agent for 3D prototyping",
+            "description": "A 17-hours competition to answer to a problem using LLMs. My choice was agentic AI to naturally and quickly prototype 3D models through a chat and generative AI",
+            "challenges": "Learning how to build Agents with tool use in a reduced time, making quick iterations on LLMs"
         },
         "all": "All projects and repositories"
     },

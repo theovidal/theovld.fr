@@ -5,11 +5,11 @@
         "date": "Date"
     },
     "home": {
-        "subtitle": "ENSTA Paris ‒ Diplôme d'ingénieur<br/>TAEP ENSTA Paris ‒ Responsable de Développement Commercial<br/>Machine Learning en auto-didacte"
+        "subtitle": "ENSTA Paris ‒ Diplôme d'ingénieur<br/>Laboratoire de Mécanique Paris-Saclay (LMPS) ‒ Stagiaire chercheur<br/>Machine Learning en auto-didacte"
     },
     "introduction": {
         "title": "Bienvenue! 👋",
-        "text": "Je m'appelle Théo, je suis actuellement étudiant en école d'ingénieur à l'ENSTA Paris. J'ai toujours été attiré par les sciences et la technologie, je souhaite ainsi participer à la création de projets variés et innovants. Sur mon temps libre, je développe des petits projets et fais de l'escalade, parmis d'autres occupations. N'hésitez-pas à me contacter pour toute information, ou simplement pour discuter!",
+        "text": "Je m'appelle Théo, je suis actuellement étudiant en école d'ingénieur à l'ENSTA Paris. J'effectue un stage de césure au Laboratoire de Mécanique Paris-Saclay (LMPS), travaillant sur le projet DREAM-ON de contrôle santé de structures en temps réel. J'ai toujours été attiré par les sciences et la technologie, je souhaite ainsi participer à la création de projets variés et innovants. Sur mon temps libre, je développe des petits projets et fais de l'escalade, parmis d'autres occupations. N'hésitez-pas à me contacter pour toute information, ou simplement pour discuter!",
         "resume": "Mon CV",
         "picture": "Ma photo de profil"
     },
@@ -26,13 +26,19 @@
             "association": "Association",
             "course": "Formation",
             "project": "Projet",
-            "certificate": "Certification"
+            "certificate": "Certification",
+            "research-internship": "Stage de recherche"
         },
 
-        "dataBootcamp": {
-            "title": "Hi! Paris Data Bootcamp",
-            "text": "Bootcamp sur la Data Science et le ML",
-            "link": "https://www.smartcertificate.com/SmartDiploma/Default.aspx?1%7ca1fab41d-48af-4a96-8fb4-ddb1ea5eac4c%7cd66b8b91-b926-4d3b-aebe-6768f6a001d1#/"
+        "lmps": {
+            "title": "Laboratoire de Mécanique Paris-Saclay (LMPS) - Université Paris-Saclay",
+            "text": "Projet DREAM-ON : contrôle santé de structures augmenté par l'IA",
+            "link": "https://erc-dreamon.ens-paris-saclay.fr/fr"
+        },
+        "fiuba": {
+            "title": "Laboratoire de Dynamique des fluides - Université de Buenos Aires (UBA), Argentine \uD83C\uDDE6\uD83C\uDDF7",
+            "text": "Étude de réseaux microfluidiques",
+            "link": "https://typst.app/project/r7jusr0D2XucPEEbKogQUm"
         },
         "taep": {
             "title": "TAEP, la Junior-Entreprise d'ENSTA Paris",
@@ -86,8 +92,10 @@
 
         "categories": {
             "web": "Développement Web",
-            "algorithmic": "Algorithmique / Machine Learning",
-            "engineering": "Ingénierie et Physique",
+            "algorithmic": "Algorithmique",
+            "ml": "Machine Learning",
+            "physics": "Physique et Simulation",
+            "engineering": "Ingénierie",
             "utils": "Utilitaires"
         },
 
@@ -120,6 +128,36 @@
             "text": "Détection de feux rouges en direct",
             "description": "Algorithme efficace utilisant les données de couleur et de forme de l'image pour détecter les feux rouges.",
             "challenges": "Utilisation des espaces de couleur, recherche poussée de l'efficacité maximale pour un résultat rapide et fiable"
+        },
+        "aierolab": {
+            "title": "AIerolab",
+            "text": "Modélisation d'une aile par IA et expériences aérodynamiques",
+            "description": "Simulation de l'écoulement autour d'une aile par Machine Learning, et impression 3D d'un modèle pour caractériser son aérodynamisme dans une soufflerie",
+            "challenges": "Développer un réseau de neurones pour la physique, conduire des expérimentations rigoureuses"
+        },
+        "ipt": {
+            "title": "Tournoi de Physique - Caractérisation du miel",
+            "text": "Recherche physique sur les oscillations du miel",
+            "description": "Expériences physiques et analyses visant à caractériser les oscillations du miel, dans le cadre du tournoi international de physique (IPT)",
+            "challenges": "Réaliser ma première démarche de recherche en autonomie"
+        },
+        "lbm": {
+            "title": "LBM pour la marche descendante",
+            "text": "Simulation par LBM",
+            "description": "Simulation par Lattice-Boltzmann du problème de la marche descendante, exploration de l'influence des paramètres et comparaison avec la bibliographie",
+            "challenges": "Programmer entièrement une simulation complexe de mécanique des fluides, analyser rigoureusement les résultats"
+        },
+        "hickathon": {
+            "title": "Hi!ckathon - Hi!Paris hackathon",
+            "text": "Hackathon - Prédiction de pénuries d'eau",
+            "description": "Une compétition de 48 heures en Machine Learning pour prédire les pénuries d'eau durant les mois d'été, par équipes de 5 à 8 en utilisant une large base de données",
+            "challenges": "Appliquer mes connaissances de ML dans un business case, travailler à plusieurs sur un projet de ML"
+        },
+        "joyero": {
+            "title": "Joyero (Hackathon MIT)",
+            "text": "Hackathon - Agent IA de prototypage 3D",
+            "description": "Une compétition de 17 heures pour répondre à un problème en utilisant la technologie des LLM. Mon choix s'est porté sur un agent IA pour prototyper des modèles 3D naturellement et rapidement, à travers une conversation et utilisant l'IA générative",
+            "challenges": "Apprendre à développer des agents avec utilisation d'outils en si peu de temps, faire des itérations rapides avec des LLM"
         },
         "all": "Tous les projets et dépôts"
     },

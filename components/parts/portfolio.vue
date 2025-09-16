@@ -33,7 +33,8 @@
     'Ruby': ['#B71C1C', '#D50000'],
     'Elixir': ['#4527A0', '#B39DDB'],
     'C': ['#90A4AE', '#616161'],
-    'MATLAB': ['#DD2C00', '#FF7043']
+    'MATLAB': ['#DD2C00', '#FF7043'],
+    'Jupyter Notebook': ['#F57C00', '#FFCC80'],
   }
 
   function getPrimaryColor(language) {
@@ -89,6 +90,7 @@
                   <v-row class="h-100 align-end">
                     <v-row class="translucent">
                       <v-col
+                          v-if="projects[projectId].withoutLogo === undefined"
                           class="d-flex flex-column justify-center flex-0-0-0">
                           <v-img
                               width="56"
