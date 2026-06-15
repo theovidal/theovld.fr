@@ -40,6 +40,7 @@ import MdiGithub from '~icons/mdi/github'
 import MdiLinkedin from '~icons/mdi/linkedin'
 import MdiEmail from '~icons/mdi/email-outline'
 import IconTelegram from '~icons/custom/telegram'
+import IconResearchGate from '~icons/custom/researchgate'
 import MdiOpenInNew from '~icons/mdi/open-in-new'
 
 const iconAliases: IconAliases = {
@@ -82,6 +83,7 @@ const iconAliases: IconAliases = {
 
     github: MdiGithub,
     linkedin: MdiLinkedin,
+    researchgate: IconResearchGate,
     email: MdiEmail,
     telegram: IconTelegram,
     openinnew: MdiOpenInNew

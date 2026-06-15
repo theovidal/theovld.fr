@@ -1,35 +1,44 @@
 export default {
+  nus: {
+    is: 'course',
+    beginning: new Date('2026.08'),
+    showFrom: true,
+    education: true,
+    location: [1.296, 103.776]
+  },
+  onera: {
+    is: 'research-internship',
+    beginning: new Date('2026.03'),
+    showFrom: true,
+    research: true,
+    location: [48.799 + 1, 2.235 + 1]
+  },
   lmps: {
     is: 'research-internship',
     beginning: new Date('2025.09'),
-    showFrom: true,
+    end: new Date('2026.02'),
+    research: true,
+    location: [48.71 - 1, 2.16 - 1]
   },
   fiuba: {
     is: 'research-internship',
     beginning: new Date('2025.05'),
-    end: new Date('2025.08')
-  },
-  taep: {
-    is: 'association',
-    beginning: new Date('2023.11'),
-    end: new Date('2025.03')
+    end: new Date('2025.08'),
+    research: true,
+    location: [-34.617, -58.368]
   },
   ensta: {
     is: 'course',
+    beginning: new Date('2023.09'),
     showFrom: true,
-    beginning: new Date('2023.09')
+    education: true,
+    location: [48.713, 2.215]
   },
-  cambridge: {
-    is: 'certificate',
-    beginning: new Date('2021.10')
-  },
-  parc: {
+  /*parc: {
     is: 'course',
     beginning: new Date('2021.09'),
-    end: new Date('2023.07')
-  },
-  carriat: {
-    is: 'course',
-    beginning: new Date('2021.07')
-  }
+    end: new Date('2023.07'),
+    education: true,
+    location: [45.772, 4.855]
+  }*/
 }

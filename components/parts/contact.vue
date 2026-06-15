@@ -4,7 +4,7 @@
       <v-col
           class="py-3"
           cols="12">
-        <h2 class="text-h2 text-center gradient-text">{{ $t('contact.title') }}</h2>
+        <h2 class="text-display-large text-center gradient-text">{{ $t('contact.title') }}</h2>
       </v-col>
       <v-col
         cols="12"

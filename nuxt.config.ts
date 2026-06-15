@@ -7,11 +7,14 @@ import Components from 'unplugin-vue-components/vite'
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: true },
+
   modules: [
     '@nuxtjs/i18n',
     'unplugin-icons/nuxt',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    '@nuxt/image'
   ],
+
   i18n: {
     vueI18n: './i18n.config.ts',
     strategy: 'no_prefix',
@@ -40,22 +43,27 @@ export default defineNuxtConfig({
       // }
     ],
   },
+
   components: [
     {
       path: '~/components',
       pathPrefix: false,
     },
   ],
+
   app: {
     head: {
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1, viewport-fit=cover',
     }
   },
-  css: ['vuetify/lib/styles/main.sass', '@mdi/font/css/materialdesignicons.min.css', 'assets/style/index.sass'],
+
+  css: ['vuetify/styles', '@mdi/font/css/materialdesignicons.min.css', 'assets/style/index.sass'],
+
   build: {
     transpile: ['vuetify'],
   },
+
   vite: {
     plugins: [
       vuetify({ autoImport: true }),
@@ -70,5 +78,7 @@ export default defineNuxtConfig({
         ],
       }),
     ]
-  }
+  },
+
+  compatibilityDate: '2026-05-29'
 })

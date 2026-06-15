@@ -10,9 +10,6 @@
     <NuxtPage />
     <v-footer class="bg-grey-darken-4 d-flex flex-column">
       <div>
-        <socials/>
-      </div>
-      <div>
         {{ new Date().getFullYear() }} — Théo Vidal
       </div>
     </v-footer>

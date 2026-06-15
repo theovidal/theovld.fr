@@ -1,93 +1,70 @@
 <template>
-  <banner
-      id="interests"
-      :src="`/img/interests/${selected}-banner-min.jpg`">
-    <v-container class="d-flex align-center">
-      <v-row>
-        <v-col cols="12">
-          <h2 class="text-h2 text-center">{{ $t('interests.title') }}</h2>
-        </v-col>
-        <v-col cols="12">
-          <v-item-group
-            v-model="selected"
-            mandatory>
-            <v-row class="justify-space-evenly">
-                <v-item
-                    v-for="(interest, name) in interests"
-                  :key="name"
-                  v-slot="{ isSelected, toggle }"
-                  :value="name">
+  <v-container class="py-10 interests-content">
+    <v-row align="stretch">
+      <v-col cols="12" md="8">
+        <h3 class="text-headline-large gradient-text mb-4">{{ $t('interests.shortTitle') }}</h3>
+        <v-row align="stretch">
+          <v-col
+            v-for="category in technicalArsenal"
+            :key="category.id"
+            cols="12"
+            sm="6"
+            md="4">
+            <v-card class="b-card skill-card h-100" rounded="lg" elevation="2">
+              <v-card-text class="d-flex flex-column h-100">
+                <div class="d-flex align-center mb-3">
+                  <div
+                    class="icon-badge mr-3"
+                    :style="{ background: `${category.color}22`, color: category.color }">
+                    <v-icon :icon="category.icon" size="22" />
+                  </div>
+                  <h4 class="text-subtitle-1 font-weight-bold">{{ $t(category.titleKey) }}</h4>
+                </div>
+                <div>
                   <v-chip
-                    :prepend-avatar="`/img/interests/${name}-icon-min.jpg`"
-                    :append-icon="isSelected && MdiChevronDown"
-                    :size="120"
-                    class="ma-1 pr-3"
-                    variant="outlined"
-                    @click="toggle">
-                    {{ $t(`interests.${name}.name`) }}
+                    v-for="skill in category.skills"
+                    :key="skill"
+                    class="ma-1"
+                    size="small"
+                    variant="tonal"
+                    :style="{ color: category.color, background: `${category.color}1a` }">
+                    {{ skill }}
                   </v-chip>
-                </v-item>
-            </v-row>
-          </v-item-group>
-        </v-col>
-        <v-col cols="12">
-          <v-window v-model="selected">
-            <v-window-item
-              v-for="(interest, name) in interests"
-              :key="name"
-              :value="name">
-              <v-row class="justify-center flex-column flex-sm-row">
-                <v-col
-                    v-for="(value, stat) in interest.stats"
-                    :key="selected + stat"
-                    class="text-center flex-grow-0"
-                    style="white-space: nowrap">
-                  <span class="text-overline text-shadow">{{ $t(`interests.${selected}.stats.${stat}`) }}</span><br>
-                  <span class="text-shadow">{{ value }}</span>
-                </v-col>
-              </v-row>
-            </v-window-item>
-          </v-window>
-        </v-col>
-      </v-row>
-    </v-container>
-  </banner>
-  <v-container class="pb-10">
-    <v-row>
-      <v-col cols="12">
+                </div>
+              </v-card-text>
+            </v-card>
+          </v-col>
+        </v-row>
+      </v-col>
+
+      <v-col cols="12" md="4">
+        <h3 class="text-headline-large gradient-text mb-4">{{ $t('interests.hobbiesTitle') }}</h3>
         <v-card
-          id="interests-card"
-          class="b-card">
-          <v-card-text>
-            <v-window v-model="selected">
-              <v-window-item
-                v-for="(interest, name) in interests"
-                :key="name"
-                :value="name">
-                <v-row>
-                  <v-col
-                    cols="12"
-                    sm="5"
-                    class="d-flex flex-column align-center align-sm-end justify-space-evenly">
-                  <h3 class="text-h4 gradient-text text-center text-sm-right">{{ $t(`interests.${name}.name`)}}</h3>
-                    <v-btn
-                      :href="!interest.link.local && interest.link.href"
-                      :target="!interest.link.local && '_blank'"
-                      :nuxt="interest.link.local"
-                      class="gradient"
-                      @click="interest.link.local && goto(interest.link.href)"
-                      :append-icon="interest.link.local ? '$next' : '$openinnew'">
-                      {{ $t(`interests.${name}.link`) }}
-                    </v-btn>
-                  </v-col>
-                  <v-col
-                    cols="12"
-                    sm="7">
-                    <p class="text-justify">{{ $t(`interests.${selected}.description`)}}</p>
-                  </v-col>
-                </v-row>
-              </v-window-item>
-            </v-window>
+          v-for="hobby in hobbies"
+          :key="hobby.id"
+          class="b-card hobby-card mb-3"
+          rounded="lg"
+          elevation="2">
+          <v-card-text class="d-flex align-center">
+            <div
+              class="icon-badge icon-badge--lg mr-4"
+              :style="{ background: `${hobby.color}22`, color: hobby.color }">
+              <v-icon :icon="hobby.icon" size="28" />
+            </div>
+            <div class="flex-grow-1">
+              <div class="text-body-1 font-weight-medium">{{ $t(hobby.titleKey) }}</div>
+              <v-btn
+                v-if="hobby.link"
+                :href="hobby.link"
+                target="_blank"
+                variant="text"
+                size="small"
+                density="compact"
+                class="pl-0 mt-1"
+                append-icon="$openinnew">
+                {{ $t('interests.view') }}
+              </v-btn>
+            </div>
           </v-card-text>
         </v-card>
       </v-col>
@@ -96,52 +73,37 @@
 </template>
 
 <script setup lang="ts">
-import MdiChevronDown from '~icons/mdi/chevron-down'
-import {useGoTo} from "vuetify";
-
-const goto = useGoTo()
-
-const selected = ref('code')
-
-const interests = {
-  code: {
-    link: {
-      local: true,
-      href: '#portfolio'
-    },
-    stats: {
-      repos: '40+',
-      languages: '5'
-    }
-  },
-  climbing: {
-    link: {
-      local: false,
-      href: 'https://highest.netlify.app'
-    },
-    stats: {
-      level: '6B',
-      competitions: '4'
-    }
-  },
-  cubing: {
-    link: {
-      local: false,
-      href: 'https://t.me/cubcarre_bot'
-    },
-    stats: {
-      number: '12',
-      threeRecord: '19.548s'
-    }
-  }
-}
+import { technicalArsenal, hobbies } from '~/data/skills'
 </script>
 
-<style lang="sass">
-@media screen and (min-width: 600px)
-  #interests
-    max-height: 400px
+<style lang="sass" scoped>
+.interests-banner
+  height: 320px
 
-#interests-card
-  margin-top: -64px
+  @media (min-width: 600px)
+    height: 400px
+
+.icon-badge
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 40px
+  height: 40px
+  border-radius: 12px
+  flex-shrink: 0
+
+  &--lg
+    width: 48px
+    height: 48px
+
+.interests-content
+  position: relative
+
+  &::before
+    content: ''
+    position: absolute
+    inset: -120px
+    background: radial-gradient(circle at 15% 20%, rgba(66, 165, 245, 0.08), transparent 60%), radial-gradient(circle at 85% 75%, rgba(255, 112, 67, 0.08), transparent 60%)
+    z-index: -1
+    pointer-events: none
 </style>

@@ -1,7 +1,6 @@
 <script setup lang="ts">
   import {useGoTo} from "vuetify";
   import experiences from "~/data/experiences";
-  import projects from "~/data/projects";
 
   const timelineItems =
       Object.fromEntries(
@@ -12,14 +11,7 @@
                 showcase: true,
                 type: 'experience',
               }
-            }),
-            ...objmap(projects, val => {
-              return {
-                ...val,
-                type: 'portfolio',
-                is: 'project'
-              }
-            }),
+            })
           })
           .sort((a, b) => b[1].beginning - a[1].beginning)
       )
@@ -32,12 +24,6 @@
       id="experience"
       class="w-screen">
     <v-row>
-      <v-col
-          class="py-5"
-          cols="12">
-        <h2 class="gradient-text text-center text-h2">{{ $t('experience.title' )}}</h2>
-        <p class="text-center">{{ $t('experience.description') }}</p>
-      </v-col>
       <v-col>
         <v-slide-group show-arrows>
           <v-timeline
@@ -51,12 +37,10 @@
               v-for="(entry, id) in timelineItems"
               :key="id">
               <v-timeline-item
-                  v-if="entry.showcase"
+                v-if="entry.showcase"
                 fill-dot
                 dot-color="primary"
-                size="90"
-                v-ripple
-                @click="entry.type === 'experience' ? navigateTo($t(`${entry.type}.${id}.link`), { external: true}) : goto(`#portfolio-${id}`)">
+                size="90">
                 <template #icon>
                   <v-avatar
                     size="85"
@@ -64,7 +48,7 @@
                 </template>
                 <template #opposite>
                     <div
-                      class="text-overline text-center"
+                      class="text-label-large text-center"
                       style="line-height: 1.1rem">
                       <date
                         :beginning="entry.beginning"
@@ -73,25 +57,14 @@
                     </div>
                 </template>
                 <div class="border-b-md border-opacity-50 border-primary pa-1">
-                  <div class="text-h5 gradient-text">{{ $t(`${entry.type}.${id}.text`) }}</div>
-                  <div class="text-overline">{{ $t(`experience.types.${entry.is}`) }}</div>
-                  <div class="text-subtitle-1">{{ $t(`${entry.type}.${id}.title`) }}</div>
+                  <div class="text-headline-small gradient-text">{{ $t(`${entry.type}.${id}.title`) }}</div>
+                  <div class="text-label-medium text-uppercase">{{ $t(`experience.types.${entry.is}`) }}</div>
+                  <div class="text-body-large">{{ $t(`${entry.type}.${id}.text`) }}</div>
                 </div>
               </v-timeline-item>
             </template>
           </v-timeline>
         </v-slide-group>
-      </v-col>
-      <v-col
-          class="text-center"
-          cols="12">
-        <v-btn
-          :text="$t('experience.view')"
-          href="https://linkedin.com/in/theovidal"
-          target="_blank"
-          variant="outlined"
-          append-icon="$openinnew"
-        />
       </v-col>
     </v-row>
   </v-container>

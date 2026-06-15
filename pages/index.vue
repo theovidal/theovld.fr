@@ -8,8 +8,8 @@
       target="#introduction">
       <v-container>
         <v-row class="align-center flex-column text-center">
-          <h1 class="text-h1 gradient-text font-weight-regular">Théo Vidal</h1><br/>
-          <span class="text-subtitle-1" v-html="$t('home.subtitle')"></span>
+          <h1 class="text-display-large gradient-text ma-0" style="font-size: 65px">Théo Vidal</h1>
+          <span class="text-body-large" v-html="$t('home.subtitle')"></span>
         </v-row>
         <v-row class="justify-center">
           <socials/>
@@ -28,37 +28,51 @@
           cols="12"
           sm="7"
           class="d-flex flex-column align-center justify-center">
-          <h2 class="text-center mb-2">{{ $t('introduction.title') }}</h2>
+          <h2 class="text-center text-display-small mb-2">{{ $t('introduction.title') }}</h2>
           <p class="text-justify mb-4">{{ $t('introduction.text') }}</p>
-          <!--<v-btn
+          <v-btn
             variant="outlined"
             :href="`/cv_${locale}.pdf`"
             target="_blank"
             :text="$t('introduction.resume')"
-          />-->
+          />
         </v-col>
         <v-col
-            order="first"
-            order-sm="last"
             cols="12"
             sm="5"
-            class="d-flex align-center justify-center mt-4 mt-sm-0">
+            class="intro-picture d-flex align-center justify-center mt-4 mt-sm-0">
           <v-avatar
-            size="200">
-            <v-img
-              cover
+            size="200"
+            color="grey-lighten-4">
+            <nuxt-img
+              provider="ipx"
               src="/img/me-min.webp"
-              :alt="$t('introduction.picture')"/>
+              :alt="$t('introduction.picture')"
+              style="width: 100%; height: 100%; object-fit: cover;"
+              />
           </v-avatar>
         </v-col>
       </v-row>
     </v-container>
+    <footprint/>
     <experience/>
-    <hr/>
-    <portfolio/>
     <interests/>
     <hr/>
+    <portfolio/>
+    <hr/>
     <contact/>
+    <banner
+      center
+      style="height: 200px"
+      src="/img/alps-reduced.webp"
+      alt="Photo of the Alps as the banner"
+      fullscreen>
+      <v-container>
+        <v-row class="justify-center">
+          <socials/>
+        </v-row>
+      </v-container>
+    </banner>
   </div>
 </template>
 
@@ -67,5 +81,10 @@ const { locale } = useI18n()
 </script>
 
 <style scoped lang="sass">
+.intro-picture
+  order: -1
+
+  @media screen and (min-width: 600px)
+    order: 2
 
 </style>

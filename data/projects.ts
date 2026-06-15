@@ -1,67 +1,29 @@
-import MdiWeb from "~icons/mdi/web";
+import MdiEarth from "~icons/mdi/earth";
 import MdiHeadCogOutline from '~icons/mdi/head-cog-outline'
 import MdiTelescope from '~icons/mdi/telescope'
 import MdiTools from '~icons/mdi/tools'
 import MdiFolderZipOutline from '~icons/mdi/folder-zip-outline'
+import MdiWaves from '~icons/mdi/waves'
 
 export default {
-  highest: {
-    tags: ['Vue.js'],
-    open: 'https://highest.netlify.app',
-    openText: 'open',
+  onera_sim: {
     showcase: true,
-    beginning: new Date('2019.11'),
-    links: {
-      github: 'https://github.com/theovidal',
-    }
+    tags: ['DNS', 'RANS', 'Turbulence Modeling', 'Fluid Mechanics'],
+    beginning: new Date('2026.04'),
+    links: {}
   },
-  bop: {
-    tags: ['Vue.js', 'Writing', 'Project management'],
-    open: 'https://becauseofprog.fr',
-    openText: 'visit',
+  erc_dreamon: {
     showcase: true,
-    beginning: new Date('2017.03'),
-    links: {
-      github: 'https://github.com/theovidal',
-      discord: 'https://discord.gg/tcV7GQq'
-    },
+    tags: ['Physics-Constrained Neural Network', 'Constitutive Relation Error', 'Data Assimilation', 'Inverse Problem'],
+    beginning: new Date('2025.09'),
+    end: new Date('2026.03'),
     madeWith: {
-      'Gildas Garin-Hameline': 'https://www.linkedin.com/in/gildas-gh/',
-      'Noéwen Boisnard': 'https://www.linkedin.com/in/no%C3%A9wen-boisnard/'
-    }
-  },
-  tipe: {
-    tags: ['OCaml', 'Supervised Learning', 'TSP'],
-    showcase: true,
-    beginning: new Date('2022.03'),
-    end: new Date('2023.07'),
-    links: {
-      github: 'https://github.com/theovidal/tipe'
-    }
-  },
-  mapping: {
-    tags: ['Electron', 'Arduino', '3D Printing'],
-    showcase: true,
-    beginning: new Date('2021.03'),
-    end: new Date('2021.06'),
-    links: {
-      docs: 'https://github.com/theovidal/mapping/blob/main/assets/docs/Dossier%20Projet%202021%20-%20CAPITANIO%20Kylian%2C%20VIDAL%20Th%C3%A9o.pdf',
-      github: 'https://github.com/theovidal/mapping'
+      'Pr. Ludovic Chamoin (supervisor)': 'https://lmps.ens-paris-saclay.fr/fr/annuaire-des-personnes/ludovic-chamoin-0',
+      'Sahar Farahbakhsh (PhD student)': 'https://scholar.google.com/citations?user=MgomsLYAAAAJ&hl=en',
+      'Antoine Benady (former PhD, researcher at ETH Zurich': 'https://scholar.google.com/citations?user=xLe4n4AAAAAJ&hl=fr'
     },
-    madeWith: {
-      'Kylian Capitanio': ''
-    }
-  },
-  vision: {
-    tags: ['MATLAB', 'Computer vision', 'AC'],
-    showcase: false,
-    beginning: new Date('2023.11'),
-    end: new Date('2024.02'),
     links: {
-      github: 'https://github.com/theovidal/vehicule-vision'
-    },
-    madeWith: {
-      'Louis Marchal': 'https://www.linkedin.com/in/louis-marchal-fr/'
+      docs: 'https://erc-dreamon.ens-paris-saclay.fr/fr'
     }
   },
   ipt: {
@@ -108,36 +70,20 @@ export default {
       'Louis Nel': '',
       'Arnaud Pelissier': "https://www.linkedin.com/in/arnaud-pel",
     }
-  },
-  joyero: {
-    tags: ['Agents', '3D modeling', 'Generative AI'],
-    beginning: new Date('2025.05.03'),
-    end: new Date('2025.05.03'),
-    links: {
-      github: 'https://github.com/theovidal/joyero-mit-hackathon'
-    }
   }
 }
 
 export const categories = {
-  engineering: {
-    icon: MdiTools,
-    projects: ['mapping', 'aierolab']
-  },
-  physics: {
-    icon: MdiTelescope,
-    projects: ['ipt', 'lbm']
-  },
-  ml: {
+  'ai-emulation': {
     icon: MdiHeadCogOutline,
-    projects: ['hickathon', 'joyero']
+    projects: ['aierolab', 'erc_dreamon']
   },
-  algorithmic: {
-    icon: MdiFolderZipOutline,
-    projects: ['tipe', 'vision']
+  'climate-geo': {
+    icon: MdiEarth,
+    projects: ['hickathon']
   },
-  web: {
-    icon: MdiWeb,
-    projects: ['highest', 'bop']
+  'fluid-dynamics': {
+    icon: MdiWaves,
+    projects: ['onera_sim', 'ipt', 'lbm']
   }
 }

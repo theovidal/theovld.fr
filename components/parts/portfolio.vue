@@ -58,7 +58,7 @@
       <v-col
           class="py-3"
           cols="12">
-        <h2 class="gradient-text text-center text-h2">{{ $t('portfolio.title') }}</h2>
+        <h2 class="gradient-text text-center text-display-medium">{{ $t('portfolio.title') }}</h2>
         <p class="text-center">{{ $t('portfolio.description') }}</p>
       </v-col>
       <v-col
@@ -168,7 +168,7 @@
           class="text-center"
           cols="12">
         <v-row>
-          <h3 class="gradient-text text-h4">{{ $t('portfolio.all') }}</h3>
+          <h3 class="gradient-text text-headline-large">{{ $t('portfolio.all') }}</h3>
           <v-spacer/>
           <v-btn
             :text="$t('portfolio.view')"

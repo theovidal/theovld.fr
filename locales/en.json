@@ -5,83 +5,63 @@
         "date": "Date"
     },
     "home": {
-        "subtitle": "ENSTA Paris — Master of Engineering<br/>Laboratory of Mechanics Paris-Saclay (LMPS) — Research intern<br/>Self-taught Machine Learning"
+        "subtitle": "Computational Fluid Dynamics & AI for Physics<br/>Research student at the intersection of fluid mechanics, deep learning emulation, and climate systems."
     },
     "introduction": {
-        "title": "Welcome! 👋",
-        "text": "My name is Théo, and I am currently studying at ENSTA Paris, one of France's leading engineering schools. I am currently achieving a gap-year internship at the Laboratory of Mechanics Paris-Saclay (LMPS), working on the DREAM-ON structural health monitoring project. I've always been passionate about science and technology, and I aim to contribute to the creation of diverse and innovative projects. In my free time, I work on small projects and enjoy climbing, among other activities. Feel free to contact me for more information or just to chat!",
-        "resume": "My resume",
+        "title": "Scientific Identity",
+        "text": "Currently engineering two-point correlation equation models for turbulence closures (RANS) using channel flow DNS datasets at ONERA. With a strong track record in academic research and international mobility, I aim to solve complex physics problems using rigorous computation and next-generation AI.",
+        "resume": "Academic CV",
         "picture": "My profile picture"
     },
     "experience": {
-        "title": "My experience",
-        "shortTitle": "Experience",
-        "description": "Click on an item to see its details!",
+        "title": "Academic Trajectory",
+        "shortTitle": "Trajectory",
+        "description": "My academic journey and research appointments.",
         "view": "View on LinkedIn",
-
         "types": {
             "job": "Job",
             "internship": "Internship",
-            "seasonal": "Seasonal",
             "association": "Association",
-            "course": "Course",
+            "course": "Academic Course",
             "project": "Project",
             "certificate": "Certificate",
-            "research-internship": "Research Internship"
+            "research-internship": "Research Appointment"
         },
-
+        "nus": {
+            "title": "College of Design and Engineering — National University of Singapore (NUS)",
+            "text": "M.Eng in Mechanical Engineering by Research. Supervised by Prof. Gianmarco Mengaldo. Physics-driven emulation for extreme climate events."
+        },
+        "onera": {
+            "title": "ONERA, The French Aerospace Lab",
+            "text": "Research Intern on two-point turbulence equation closures (RANS) using DNS datasets."
+        },
         "lmps": {
-            "title": "Laboratory of Mechanics Paris-Saclay (LMPS) - Paris-Saclay University",
-            "text": "DREAM-ON project: structural health monitoring augmented by AI",
-            "link": "https://erc-dreamon.ens-paris-saclay.fr/en"
+            "title": "Laboratory of Mechanics Paris-Saclay (LMPS) — University of Paris-Saclay",
+            "text": "ERC DREAM-ON project. Data assimilation via Kalman filtering & physics-augmented neural networks."
         },
         "fiuba": {
-            "title": "Fluid Dynamics laboratory - University of Buenos Aires (UBA), Argentina \uD83C\uDDE6\uD83C\uDDF7",
-            "text": "Study of microfluidic channels",
-            "link": "https://typst.app/project/r7jusr0D2XucPEEbKogQUm"
-        },
-        "taep": {
-            "title": "TAEP, the Junior-Enterprise of ENSTA Paris",
-            "text": "Head of Business Development",
-            "link": "https://taep.fr"
+            "title": "Laboratory of Fluid Dynamics — University of Buenos Aires (UBA) ",
+            "text": "Experimental microfluidics, Marangoni flows, and thermal capillary networks."
         },
         "ensta": {
-            "title": "ENSTA Paris",
-            "text": "Master of Engineering",
-            "link": "https://www.linkedin.com/in/theovidal/details/education/"
-        },
-        "cambridge": {
-            "title": "Language skills - English",
-            "text": "Cambridge C1 Certificate",
-            "link": "https://www.linkedin.com/in/theovidal/details/certifications/"
+            "title": "M.Sc. in Engineering — ENSTA Paris",
+            "text": "Focus on Dynamical Systems, Compressible Fluids, Turbulence, and CFD. Top 5% ranking."
         },
         "parc": {
-            "title": "Lycée du Parc, Lyon",
-            "text": "High-intensity \"preparatory class\" Maths, Physics, CS",
-            "link": "https://www.linkedin.com/in/theovidal/details/education/"
-        },
-        "areas": {
-            "title": "Columbus Café&Co et Ibis Hôtels",
-            "text": "Multi-purpose employee at a freeway service area"
-        },
-        "carriat": {
-            "title": "Lycée Carriat, Bourg-en-Bresse",
-            "text": "High school diploma ‒ Maths, Engineering Science",
-            "link": "https://www.linkedin.com/in/theovidal/details/education/"
+            "title": "French \"Classe preparatoire\" - Mathematics, physics, computer science ",
+            "text": "Intensive theoretical preparation, ranked 17 nationwide at the entrance examination."
         }
     },
     "portfolio": {
-        "title": "My projects",
-        "shortTitle": "Portfolio",
-        "description": "Development and/or engineering projects, partially or totally using self-taught skills on my free time.",
-
+        "title": "Core Research Pillars",
+        "shortTitle": "Research",
+        "description": "Focused research across computational fluid mechanics, AI emulation, and climate scale systems.",
         "view": "View on GitHub",
-        "madeWith": "Made with:",
-        "challenges": "Challenges:",
-
+        "madeWith": "Collaborators:",
+        "challenges": "Methodology:",
         "links": {
             "github": "GitHub",
-            "docs": "Documentation",
+            "docs": "Paper / Documentation",
             "website": "Website",
             "discord": "Discord server",
             "demo": "Demonstration",
@@ -89,16 +69,11 @@
             "see": "View",
             "visit": "Visit"
         },
-
         "categories": {
-            "web": "Web Development",
-            "algorithmic": "Algorithmic",
-            "ml": "Machine Learning",
-            "physics": "Physics and Simulation",
-            "engineering": "Engineering",
-            "utils": "Utils"
+            "fluid-dynamics": "Fluid Mechanics & Simulation",
+            "ai-emulation": "AI for Physics Emulation",
+            "climate-geo": "Climate & Geophysical Systems"
         },
-
         "highest": {
             "title": "Highest",
             "text": "Web application for climbing enthusiasts",
@@ -131,76 +106,69 @@
         },
         "aierolab": {
             "title": "AIerolab",
-            "text": "Airfoil modeling using AI and aerodynamics experiments",
-            "description": "Simulating the flow around an airfoil using Machine Learning, and printing a 3D model to characterize its aerodynamics in a wind tunnel",
-            "challenges": "Developing a neural network for physics, rigorously conducting experiments"
+            "text": "Physics-Informed Neural Networks for Airfoils",
+            "description": "Simulating the flow around an airfoil using Physics-Informed Machine Learning (PINNs), and evaluating surrogate models for rapid aerodynamic characterization.",
+            "challenges": "Developing a neural network for physics, rigorously conducting numerical experiments"
         },
         "ipt": {
-            "title": "Physics tournament - Honey characterization",
-            "text": "Physical investigation on honey oscillations",
-            "description": "Physics experiments and analysis to characterize the oscillations of honey, in the context of the International Physicists' Tournament (IPT)",
-            "challenges": "Autonomously conducting my first research methodology"
+            "title": "International Physicists' Tournament",
+            "text": "Experimental investigation on honey dynamics",
+            "description": "Physics experiments and theoretical analysis to characterize the coiling and droplet dynamics of honey.",
+            "challenges": "Autonomously conducting experimental methodology and theoretical formulation"
         },
         "lbm": {
-            "title": "LBM for the backward-facing step",
-            "text": "Lattice Boltzmann simulation",
-            "description": "Lattice-Boltzmann simulation of the backward-facing step, exploring the influence of parameters and comparing to bibliography",
-            "challenges": "Coding from scratch a complex fluid mechanics simulation, rigorously analyzing the results"
+            "title": "LBM Simulations for RANS Verification",
+            "text": "Lattice Boltzmann backward-facing step",
+            "description": "Lattice-Boltzmann Method (LBM) solver developed to explore influence parameters and validate standard experimental benchmarks.",
+            "challenges": "Constructing computationally stable LBM solvers for complex boundary conditions"
         },
         "hickathon": {
-            "title": "Hi!ckathon - Hi!Paris hackathon",
-            "text": "Hackathon - Water shortages prediction",
-            "description": "A 48-hours Machine Learning competition to predict water shortages during summer months, by teams of 5-8 and using a large database",
-            "challenges": "Applying prior ML knowledge to a real business case, working with many people on a ML project"
+            "title": "Hi!ckathon Water Prediction Systems",
+            "text": "Spatiotemporal regression for climate data",
+            "description": "Machine Learning pipeline to predict regional water shortages combining massive environmental datasets with XGBoost and temporal networks.",
+            "challenges": "Data assimilation on complex spatio-temporal grids"
         },
         "joyero": {
             "title": "Joyero (MIT Hackathon)",
             "text": "Hackathon - AI agent for 3D prototyping",
-            "description": "A 17-hours competition to answer to a problem using LLMs. My choice was agentic AI to naturally and quickly prototype 3D models through a chat and generative AI",
-            "challenges": "Learning how to build Agents with tool use in a reduced time, making quick iterations on LLMs"
+            "description": "Agentic AI to naturally and quickly prototype 3D models through a chat and generative AI.",
+            "challenges": "Developing scalable agent architectures"
+        },
+        "onera_sim": {
+            "title": "ONERA Turbulence Closures",
+            "text": "RANS Models using Channel Flow DNS",
+            "description": "Engineering two-point correlation equation models for turbulence closures (RANS) directly utilizing top-tier channel flow DNS datasets.",
+            "challenges": "Managing petabyte-scale simulation databases and deriving statistically robust closure terms."
         },
         "all": "All projects and repositories"
     },
     "interests": {
-        "title": "My interests",
-        "shortTitle": "Interests",
-        "code": {
-            "name": "Programming",
-            "description": "I have had a passion for computing for a long time, and I create my own applications and websites since I'm twelve (2016) to put my ideas into practice without being dependent on others or inflexible tools. Since 2018, I publish some of them on Github to share my creations and open them to everyone's contribution. I have learnt OCaml and C in preparatory class, Javascript, Python, Ruby and Go by self-taught, and I use Jetbrains IDE on Linux. ",
-            "stats": {
-                "repos": "GitHub repositories",
-                "languages": "Practiced languages"
-            },
-            "link": "My projects"
-        },
-        "climbing": {
-            "name": "Climbing",
-            "description": "Since joining a club in 2018, I've enjoyed climbing routes and bouldering, indoor or outdoor, to challenge myself and clear my head. I complete this practice with various sport (weight training, cardio, mountain biking) so that I'm always in shape to progress.",
-            "stats": {
-                "level": "Level (free climbing)",
-                "competitions": "Competitions & contests"
-            },
-            "link": "My climbing app"
-        },
-        "cubing": {
-            "name": "Twisty puzzles",
-            "description": "I have learnt to solve the Rubik's Cube then various algorithms so I can solve it as fast as I can (Speed Cubing field), then I did the same with other puzzles. My ambition is to eventually participate at competitions, friendly exchange moments on this wide subject. From now on I solve puzzles without assistance to deeply understand their mechanism arouse my curiosity.",
-            "stats": {
-                "number": "Different puzzles",
-                "threeRecord": "3x3 record"
-            },
-            "link": "My stopwatch"
+        "title": "Technical Arsenal & Hobbies",
+        "shortTitle": "Technical Arsenal",
+        "hobbiesTitle": "Hobbies",
+        "view": "View profile"
+    },
+    "skills": {
+        "categories": {
+            "physics": "Computation & Physics",
+            "ai": "AI & Scientific Computing",
+            "engineering": "Languages & Core Engineering"
         }
     },
+    "hobbies": {
+        "climbing": "Climbing & bouldering",
+        "hiking": "Hiking & outdoors exploration",
+        "travel": "Travel & international immersion"
+    },
     "contact": {
-        "title": "Let's meet!",
+        "title": "Contact me",
         "shortTitle": "Contact",
         "link": "https://tally.so/r/3ELgd2"
     },
     "resources": {
         "shortTitle": "Resources"
     },
-     "link": {
+    "link": {
         "redirecting": "Redirecting...",
         "manual": "If you are not redirected automatically, click on the link bellow:"
     }
