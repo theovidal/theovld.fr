@@ -1,8 +1,8 @@
 <template>
-  <v-container class="py-10 interests-content">
+  <v-container class="py-10 skills-content">
     <v-row align="stretch">
       <v-col cols="12" md="8">
-        <h3 class="text-headline-large gradient-text mb-4">{{ $t('interests.shortTitle') }}</h3>
+        <h3 class="text-headline-large gradient-text mb-4">{{ $t('skills.shortTitle') }}</h3>
         <v-row align="stretch">
           <v-col
             v-for="category in technicalArsenal"
@@ -38,7 +38,7 @@
       </v-col>
 
       <v-col cols="12" md="4">
-        <h3 class="text-headline-large gradient-text mb-4">{{ $t('interests.hobbiesTitle') }}</h3>
+        <h3 class="text-headline-large gradient-text mb-4">{{ $t('skills.hobbiesTitle') }}</h3>
         <v-card
           v-for="hobby in hobbies"
           :key="hobby.id"
@@ -62,7 +62,7 @@
                 density="compact"
                 class="pl-0 mt-1"
                 append-icon="$openinnew">
-                {{ $t('interests.view') }}
+                {{ $t('skills.view') }}
               </v-btn>
             </div>
           </v-card-text>
@@ -96,7 +96,7 @@ import { technicalArsenal, hobbies } from '~/data/skills'
     width: 48px
     height: 48px
 
-.interests-content
+.skills-content
   position: relative
 
   &::before

@@ -53,85 +53,43 @@
 <template>
   <v-container
       id="portfolio"
-      class="w-screen">
+    fluid>
     <v-row class="justify-around">
-      <v-col
-          class="py-3"
-          cols="12">
-        <h2 class="gradient-text text-center text-display-medium">{{ $t('portfolio.title') }}</h2>
+      <v-col cols="12">
+        <h2 class="gradient-text text-center text-display-large mb-0">{{ $t('portfolio.title') }}</h2>
         <p class="text-center">{{ $t('portfolio.description') }}</p>
       </v-col>
       <v-col
         v-for="(category, categoryId) in categories"
         :key="categoryId"
         cols="12"
-        md="6">
-        <v-row>
+        :md="category.full ? 12 : 6">
+        <v-row density="compact">
           <v-col
             cols="12"
             class="d-flex align-center">
             <v-icon
-                color="primary"
-                :icon="category.icon"/>
-            <h3 class="gradient-text text-h4 ml-2">{{ $t(`portfolio.categories.${categoryId}`) }}</h3>
+              color="primary"
+              :icon="category.icon"/>
+            <h3 class="gradient-text text-headline-large ml-2 my-0">{{ $t(`portfolio.categories.${categoryId}`) }}</h3>
           </v-col>
           <v-col
             v-for="projectId in category.projects"
             :key="projectId"
             class="pa-1"
             cols="12"
-            sm="6">
+            :sm="category.full ? 3 : 6">
             <v-card
                 :id="`portfolio-${projectId}`"
                 class="b-card box-shadow">
               <v-parallax
+                v-if="!projects[projectId].noBanner"
                 :src="`/img/portfolio/${projectId}-banner-min.webp`"
-                :alt="`Banner for project ${$t(`portfolio.${projectId}.name`)}`">
-                  <v-row class="h-100 align-end">
-                    <v-row class="translucent">
-                      <v-col
-                          v-if="projects[projectId].withoutLogo === undefined"
-                          class="d-flex flex-column justify-center flex-0-0-0">
-                          <v-img
-                              width="56"
-                              :src="`/img/portfolio/${projectId}-min.webp`"
-                              :alt="`Icon for project ${$t(`portfolio.${projectId}.title`)}`"/>
-                      </v-col>
-                      <v-col
-                        class="py-0 d-flex align-center">
-                        <h3 class="text-white text-heading-5">{{ $t(`portfolio.${projectId}.title`) }}</h3>
-                      </v-col>
-                      <v-col class="text-right">
-                        <v-tooltip
-                          v-for="(url, name) in projects[projectId].links"
-                          :key="name"
-                          :text="$t(`portfolio.links.${name}`)"
-                          location="left">
-                          <template #activator="{ props }">
-                            <v-btn
-                              :href="url"
-                              target="_blank"
-                              color="white"
-                              variant="text"
-                              :icon="icons[name]"
-                              v-bind="props">
-                            </v-btn>
-                          </template>
-                        </v-tooltip>
-                      </v-col>
-                    </v-row>
-                  </v-row>
-              </v-parallax>
+                :alt="`Banner for project ${$t(`portfolio.${projectId}.name`)}`"/>
               <v-card-text>
-                <v-chip
-                  v-for="tag in projects[projectId].tags"
-                  :key="tag"
-                  variant="outlined"
-                  class="ma-1">
-                  {{ tag }}
-                </v-chip>
+                <h3 class="text-white text-heading-5 my-0">{{ $t(`portfolio.${projectId}.title`) }}</h3>
                 <p class="text-justify font-weight-medium">{{ $t(`portfolio.${projectId}.description`) }}</p>
-                <ul>
+                <ul class="pl-0">
                   <li>
                     <date
                       :beginning="projects[projectId].beginning"
@@ -150,15 +108,31 @@
                   </li>
                   <li><span>{{ $t('portfolio.challenges') }}&nbsp;</span> {{ $t(`portfolio.${projectId}.challenges`) }}</li>
                 </ul>
+                <v-chip
+                  v-for="tag in projects[projectId].tags"
+                  :key="tag"
+                  size="small"
+                  class="ma-1">
+                  {{ tag }}
+                </v-chip>
               </v-card-text>
-              <v-card-actions v-if="projects[projectId].open !== undefined">
-                <v-btn
-                  :href="projects[projectId].open"
-                  :text="$t(`portfolio.links.${projects[projectId].openText}`)"
-                  color="primary"
-                  variant="text"
-                  target="_blank"
-                  append-icon="$openinnew"/>
+              <v-card-actions v-if="projects[projectId].links">
+                <v-tooltip
+                  v-for="(url, name) in projects[projectId].links"
+                  :key="name"
+                  :text="$t(`portfolio.links.${name}`)"
+                  location="bottom">
+                  <template #activator="{ props }">
+                    <v-btn
+                      :href="url"
+                      target="_blank"
+                      color="white"
+                      variant="text"
+                      :icon="icons[name]"
+                      v-bind="props">
+                    </v-btn>
+                  </template>
+                </v-tooltip>
               </v-card-actions>
             </v-card>
           </v-col>
@@ -167,9 +141,8 @@
       <v-col
           class="text-center"
           cols="12">
-        <v-row>
+        <v-row class="align-center">
           <h3 class="gradient-text text-headline-large">{{ $t('portfolio.all') }}</h3>
-          <v-spacer/>
           <v-btn
             :text="$t('portfolio.view')"
             href="https://github.com/theovidal"
@@ -220,8 +193,8 @@
                       <v-chip
                         v-for="topic in repo.topics.slice(0, 4)"
                         :key="topic"
-                        class="ma-1"
-                        variant="outlined">
+                        size="small"
+                        class="ma-1">
                         {{ topic }}
                       </v-chip>
                     </v-card-text>
@@ -237,5 +210,6 @@
 </template>
 
 <style scoped lang="sass">
-
+ul li span
+  padding-left: 2px
 </style>

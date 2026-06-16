@@ -92,7 +92,7 @@ const hasBottom = computed(() => hasTarget || hasExpand)
 
 .container
   color: white
-  // background: rgba(33, 33, 33, 0.56)
+  background-color: rgba(80, 80, 80, 0.56) !important
   margin: 0
   height: 100%
   max-width: 100vw !important

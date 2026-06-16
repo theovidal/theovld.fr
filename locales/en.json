@@ -2,14 +2,22 @@
     "general": {
         "menu": "Navigation menu",
         "from": "From",
-        "date": "Date"
+        "date": "Date",
+        "prospective": "Prospective",
+        "theme": {
+            "toggle": "Toggle light/dark",
+            "change": "Theme selector",
+            "dark": "Dark theme",
+            "light": "Light theme",
+            "auto": "Automatic (system)"
+        }
     },
     "home": {
         "subtitle": "Computational Fluid Dynamics & AI for Physics<br/>Research student at the intersection of fluid mechanics, deep learning emulation, and climate systems."
     },
     "introduction": {
         "title": "Scientific Identity",
-        "text": "Currently engineering two-point correlation equation models for turbulence closures (RANS) using channel flow DNS datasets at ONERA. With a strong track record in academic research and international mobility, I aim to solve complex physics problems using rigorous computation and next-generation AI.",
+        "text": "Trained in theoretical and numerical fluid dynamics, I am currently engineering two-point correlation equation models for turbulence closures (RANS) using channel flow DNS datasets at ONERA. With a strong track record in academic research, international mobility and self-taught machine learning, I aim to solve complex physics problems using rigorous computation and next-generation AI.",
         "resume": "Academic CV",
         "picture": "My profile picture"
     },
@@ -74,36 +82,6 @@
             "ai-emulation": "AI for Physics Emulation",
             "climate-geo": "Climate & Geophysical Systems"
         },
-        "highest": {
-            "title": "Highest",
-            "text": "Web application for climbing enthusiasts",
-            "description": "A web application that allows climbers to log their routes and track their progress, inspired by my passion for climbing.",
-            "challenges": "Optimization and deployment of a complete web application"
-        },
-        "bop": {
-            "title": "BecauseOfProg",
-            "text": "Blog & Development Team",
-            "description": "We are a group of IT enthusiasts brought together to create projects and share our discoveries.",
-            "challenges": "Writing popularization articles, developing a blog and managing projects since I'm 14"
-        },
-        "mapping": {
-            "title": "3D cartography platform",
-            "text": "3D cartography platform",
-            "description": "A 3D-printed platform equipped with a LiDAR sensor for room modeling. Real-time scan transmission to a website, with options for calculations and surface reconstruction.",
-            "challenges": "Component interfacing, radio communication, and 3D modeling"
-        },
-        "tipe": {
-            "title": "Earthquake reconnaissance drone",
-            "text": "Path tracing algorithms over a urban environment",
-            "description": "Trajectory planification algorithms for drones to explore zones devastated by an earthquake, taking into account topography and population density.",
-            "challenges": "Applying a rigorous scientific method with multiple different algorithms and summarizing the results"
-        },
-        "vision": {
-            "title": "MATLAB Computer vision",
-            "text": "Live red traffic lights detection",
-            "description": "Efficient algorithm using color and shape data from the image to detect red traffic lights.",
-            "challenges": "Use of various color spaces, advanced research of maximum efficiency for fast, reliable results"
-        },
         "aierolab": {
             "title": "AIerolab",
             "text": "Physics-Informed Neural Networks for Airfoils",
@@ -123,16 +101,10 @@
             "challenges": "Constructing computationally stable LBM solvers for complex boundary conditions"
         },
         "hickathon": {
-            "title": "Hi!ckathon Water Prediction Systems",
+            "title": "Hackathon: Water Prediction Systems",
             "text": "Spatiotemporal regression for climate data",
             "description": "Machine Learning pipeline to predict regional water shortages combining massive environmental datasets with XGBoost and temporal networks.",
             "challenges": "Data assimilation on complex spatio-temporal grids"
-        },
-        "joyero": {
-            "title": "Joyero (MIT Hackathon)",
-            "text": "Hackathon - AI agent for 3D prototyping",
-            "description": "Agentic AI to naturally and quickly prototype 3D models through a chat and generative AI.",
-            "challenges": "Developing scalable agent architectures"
         },
         "onera_sim": {
             "title": "ONERA Turbulence Closures",
@@ -140,15 +112,17 @@
             "description": "Engineering two-point correlation equation models for turbulence closures (RANS) directly utilizing top-tier channel flow DNS datasets.",
             "challenges": "Managing petabyte-scale simulation databases and deriving statistically robust closure terms."
         },
+        "erc_dreamon": {
+            "title": "DREAM-ON ERC - Structure digital twin",
+            "description": "Real-time structural health monitoring with Kalman filtering to build a high-fidelity digital twin ; Machine Learning-based material modeling",
+            "challenges": "Collaborating on a project intertwining three PhD students work, extend the code to treat experimental data, integrate the Neural Network in the loop"
+        },
         "all": "All projects and repositories"
     },
-    "interests": {
-        "title": "Technical Arsenal & Hobbies",
-        "shortTitle": "Technical Arsenal",
-        "hobbiesTitle": "Hobbies",
-        "view": "View profile"
-    },
     "skills": {
+        "shortTitle": "Skills",
+        "hobbiesTitle": "Hobbies",
+        "view": "View profile",
         "categories": {
             "physics": "Computation & Physics",
             "ai": "AI & Scientific Computing",

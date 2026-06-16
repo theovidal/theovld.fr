@@ -106,6 +106,8 @@ export default defineNuxtPlugin(nuxtApp => {
                     colors: {
                         ...commonColors,
                         background: '#fafafa',
+                        continents: '#afafaf',
+                        continentsBorder: '#989898',
                         opposite: '#000'
                     }
                 },
@@ -114,6 +116,8 @@ export default defineNuxtPlugin(nuxtApp => {
                     colors: {
                         ...commonColors,
                         background: '#000',
+                        continents: '#6c6c6c',
+                        continentsBorder: '#858585',
                         opposite: '#fafafa'
                     }
                 }

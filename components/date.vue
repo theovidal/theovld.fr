@@ -1,5 +1,8 @@
 <template>
   <span>
+    <template v-if="(showSoon && !props.end)">
+      ({{ $t('general.prospective') }})&nbsp;
+    </template>
     <template v-if="(showFrom && !props.end)">
       {{ $t('general.from') }}&nbsp;
     </template>
@@ -15,7 +18,8 @@
 interface Props {
   beginning: Date,
   end: Date | undefined | null,
-  showFrom: boolean
+  showFrom: boolean,
+  showSoon: boolean
 }
 
 const props = defineProps<Props>()

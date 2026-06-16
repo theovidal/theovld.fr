@@ -35,6 +35,7 @@ const points = Object.entries(experiences)
       lng,
       left: (x / MAP_WIDTH) * 100,
       top: (y / MAP_HEIGHT) * 100,
+      country: val.country,
     }
   })
   .filter((p): p is NonNullable<typeof p> => p !== null)
@@ -46,12 +47,12 @@ const points = Object.entries(experiences)
        <v-col
           class="py-5"
           cols="12">
-        <h2 class="gradient-text text-center text-display-medium">{{ $t('experience.title' )}}</h2>
+        <h2 class="gradient-text text-center text-display-large">{{ $t('experience.title' )}}</h2>
       </v-col>
     </v-row>
     <v-row class="justify-center">
       <v-col cols="12" md="10">
-        <v-card class="map-card bg-grey-darken-4 pa-4 rounded-xl" elevation="4">
+        <v-card class="map-card pa-4 box-shadow rounded-xl" elevation="4">
           <div class="map-wrapper">
             <svg viewBox="0 0 1000 500" class="world-map" preserveAspectRatio="xMidYMid meet">
               <path :d="worldMapPath" class="continent" />
@@ -68,8 +69,8 @@ const points = Object.entries(experiences)
                   <span class="map-pin__pulse" />
                 </div>
               </template>
-              <div class="text-caption font-weight-bold">{{ $t(`experience.${point.id}.title`) }}</div>
-              <div class="text-caption text-grey-lighten-1">{{ $t(`experience.${point.id}.text`) }}</div>
+              <div class="text-caption font-weight-bold">{{ point.country }} {{ $t(`experience.${point.id}.title`) }}</div>
+              <div class="text-caption ">{{ $t(`experience.${point.id}.text`) }}</div>
             </v-tooltip>
           </div>
         </v-card>
@@ -78,68 +79,57 @@ const points = Object.entries(experiences)
   </v-container>
 </template>
 
-<style scoped>
-.map-card {
-  filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5));
-}
+<style scoped lang="sass">
+.map-wrapper
+  position: relative
+  width: 100%
+  aspect-ratio: 2/1 /* matches 1000x500 viewBox */
 
-.map-wrapper {
-  position: relative;
-  width: 100%;
-  aspect-ratio: 2 / 1; /* matches 1000x500 viewBox */
-}
+.world-map
+  position: absolute
+  inset: 0
+  width: 100%
+  height: 100%
 
-.world-map {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
+.continent
+  fill: rgb(var(--v-theme-continents))
+  stroke: rgb(var(--v-theme-continents-border))
+  stroke-width: 0.5
 
-.continent {
-  fill: #2d2d2d;
-  stroke: #555;
-  stroke-width: 0.5;
-}
+.map-pin
+  position: absolute
+  transform: translate(-50%, -50%)
+  width: 16px
+  height: 16px
+  cursor: pointer
 
-.map-pin {
-  position: absolute;
-  transform: translate(-50%, -50%);
-  width: 16px;
-  height: 16px;
-  cursor: pointer;
-}
+.map-pin__dot
+  position: absolute
+  inset: 0
+  margin: auto
+  width: 12px
+  height: 12px
+  border-radius: 50%
+  background: rgb(var(--v-theme-primary))
+  box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.25)
 
-.map-pin__dot {
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: #2196f3;
-  box-shadow: 0 0 0 4px rgba(33, 150, 243, 0.25);
-}
+.map-pin__pulse
+  position: absolute
+  inset: 0
+  margin: auto
+  width: 10px
+  height: 10px
+  border-radius: 50%
+  border: 2px solid  rgb(var(--v-theme-primary))
+  animation: map-pulse 2s ease-out infinite
 
-.map-pin__pulse {
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  border: 2px solid #2196f3;
-  animation: map-pulse 2s ease-out infinite;
-}
+@keyframes map-pulse
+  0%
+    transform: scale(1)
+    opacity: 0.8
 
-@keyframes map-pulse {
-  0% {
-    transform: scale(1);
-    opacity: 0.8;
-  }
-  100% {
-    transform: scale(2.6);
-    opacity: 0;
-  }
-}
+  100%
+    transform: scale(2.6)
+    opacity: 0
+
 </style>

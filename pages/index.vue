@@ -8,7 +8,7 @@
       target="#introduction">
       <v-container>
         <v-row class="align-center flex-column text-center">
-          <h1 class="text-display-large gradient-text ma-0" style="font-size: 65px">Théo Vidal</h1>
+          <h1 class="text-display-large gradient-text ma-0" style="font-size: 96px">Théo Vidal</h1>
           <span class="text-body-large" v-html="$t('home.subtitle')"></span>
         </v-row>
         <v-row class="justify-center">
@@ -17,6 +17,7 @@
       </v-container>
       <template #bottom>
         <locale-switcher/>
+        <theme-switcher/>
       </template>
     </banner>
     <v-container
@@ -56,7 +57,7 @@
     </v-container>
     <footprint/>
     <experience/>
-    <interests/>
+    <skills/>
     <hr/>
     <portfolio/>
     <hr/>

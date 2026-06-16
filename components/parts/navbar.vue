@@ -43,10 +43,6 @@
           @click="goTo(`#${link}`)">
           {{ $t(`${link}.shortTitle`) }}
         </v-btn>
-      </div>
-    </template>
-    <template #default>
-      <div class="d-none d-md-block">
         <v-btn
             v-for="link in externalLinks"
             :key="link.name"
@@ -59,6 +55,7 @@
       </div>
     </template>
     <template #append>
+      <theme-switcher/>
       <locale-switcher/>
     </template>
   </v-app-bar>
@@ -80,7 +77,7 @@ function onResize() {
   windowSize.height = window.innerHeight
 }
 
-const links = ['experience', 'portfolio', 'interests', 'contact']
+const links = ['experience', 'portfolio', 'contact']
 
 const externalLinks = [
   {

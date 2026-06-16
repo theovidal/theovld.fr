@@ -1,10 +1,9 @@
 <template>
   <v-container id="contact">
-    <v-row class="justify-center">
+    <v-row class="justify-center" density="compact">
       <v-col
-          class="py-3"
           cols="12">
-        <h2 class="text-display-large text-center gradient-text">{{ $t('contact.title') }}</h2>
+        <h2 class="text-display-large text-center gradient-text my-3">{{ $t('contact.title') }}</h2>
       </v-col>
       <v-col
         cols="12"

@@ -10,7 +10,8 @@ export default {
     showcase: true,
     tags: ['DNS', 'RANS', 'Turbulence Modeling', 'Fluid Mechanics'],
     beginning: new Date('2026.04'),
-    links: {}
+    links: {},
+    noBanner: true
   },
   erc_dreamon: {
     showcase: true,
@@ -18,9 +19,9 @@ export default {
     beginning: new Date('2025.09'),
     end: new Date('2026.03'),
     madeWith: {
-      'Pr. Ludovic Chamoin (supervisor)': 'https://lmps.ens-paris-saclay.fr/fr/annuaire-des-personnes/ludovic-chamoin-0',
-      'Sahar Farahbakhsh (PhD student)': 'https://scholar.google.com/citations?user=MgomsLYAAAAJ&hl=en',
-      'Antoine Benady (former PhD, researcher at ETH Zurich': 'https://scholar.google.com/citations?user=xLe4n4AAAAAJ&hl=fr'
+      'Pr. Ludovic Chamoin (Paris-Saclay)': 'https://lmps.ens-paris-saclay.fr/fr/annuaire-des-personnes/ludovic-chamoin-0',
+      'Sahar Farahbakhsh (Paris-Saclay)': 'https://scholar.google.com/citations?user=MgomsLYAAAAJ&hl=en',
+      'Antoine Benady (Paris-Saclay, ETH Zurich)': 'https://scholar.google.com/citations?user=xLe4n4AAAAAJ&hl=fr'
     },
     links: {
       docs: 'https://erc-dreamon.ens-paris-saclay.fr/fr'
@@ -52,12 +53,11 @@ export default {
     end: new Date('2025.05.05'),
     links: {
       github: 'https://github.com/theovidal/study-projects/blob/main/mechanics/lattice-boltzmann-backward-facing-step/Projet_VIDAL.ipynb'
-    },
-    withoutLogo: true
+    }
   },
   hickathon: {
     showcase: true,
-    tags: ['Hackathon', 'Water resources', 'XGBoost', 'Data prep'],
+    tags: ['XGBoost', 'Data prep', 'Geodata'],
     beginning: new Date('2024.12'),
     end: new Date('2024.12'),
     links: {
@@ -76,7 +76,7 @@ export default {
 export const categories = {
   'ai-emulation': {
     icon: MdiHeadCogOutline,
-    projects: ['aierolab', 'erc_dreamon']
+    projects: ['aierolab', 'erc_dreamon'],
   },
   'climate-geo': {
     icon: MdiEarth,
@@ -84,6 +84,7 @@ export const categories = {
   },
   'fluid-dynamics': {
     icon: MdiWaves,
-    projects: ['onera_sim', 'ipt', 'lbm']
+    projects: ['onera_sim', 'ipt', 'lbm'],
+    full: true
   }
 }
