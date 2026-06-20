@@ -41,7 +41,7 @@
 
   const filterWithAttachments = (dataObject, type) => {
     return Object.entries(dataObject)
-      .filter(([key, value]) => value.attachment) // Only keep items with an attachment
+      .filter(([_, value]) => value.attachment) // Only keep items with an attachment
         .sort((a, b) => b[1].date - a[1].date)
       .map(([key, value]) => ({
         id: key,
@@ -90,10 +90,13 @@
             <v-card
                 :id="`portfolio-${projectId}`"
                 class="b-card box-shadow">
-              <v-parallax
-                v-if="!projects[projectId].noBanner"
-                :src="`/img/portfolio/${projectId}-banner-min.webp`"
-                :alt="`Banner for project ${$t(`portfolio.${projectId}.name`)}`"/>
+              <template v-if="!projects[projectId].noBanner">
+                <v-img
+                  v-if="!projects[projectId].noBanner"
+                  :src="`/img/portfolio/${projectId}-banner-min.webp`"
+                  :alt="`Banner for project ${$t(`portfolio.${projectId}.name`)}`"/>
+                <hr style="height: 2px"/>
+              </template>
               <v-card-text>
                 <h3 class="text-heading-5 my-0">{{ $t(`portfolio.${projectId}.title`) }}</h3>
                 <p class="text-justify font-weight-medium">{{ $t(`portfolio.${projectId}.description`) }}</p>
