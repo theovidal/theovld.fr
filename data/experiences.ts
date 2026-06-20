@@ -1,7 +1,7 @@
 export default {
   nus: {
     is: 'course',
-    beginning: new Date('2026.08'),
+    beginning: new Date('2026-08-03'),
     showFrom: true,
     showSoon: true,
     education: true,
@@ -11,7 +11,7 @@ export default {
   },
   onera: {
     is: 'research-internship',
-    beginning: new Date('2026.03'),
+    beginning: new Date('2026-03-02'),
     showFrom: true,
     research: true,
     location: [48.799 + 1, 2.235 + 1],
@@ -20,8 +20,8 @@ export default {
   },
   lmps: {
     is: 'research-internship',
-    beginning: new Date('2025.09'),
-    end: new Date('2026.02'),
+    beginning: new Date('2025-09-01'),
+    end: new Date('2026-02-27'),
     research: true,
     location: [48.71 - 1, 2.16 - 1],
     country: '🇫🇷',
@@ -29,14 +29,14 @@ export default {
   },
   fiuba: {
     is: 'research-internship',
-    beginning: new Date('2025.05'),
-    end: new Date('2025.08'),
+    beginning: new Date('2025-05-26'),
+    end: new Date('2025-08-22'),
     research: true,
     location: [-34.617, -58.368],
     country: '🇦🇷',
     logo: 'uba.svg',
     attachment: {
-      date: new Date('2025.08.25'),
+      date: new Date('2025-08-25'),
       title: 'Particule separation in microfluidic channels by temperature variation',
       authors: 'Théo Vidal, Guillermo O. Artana',
       path: '/files/Vidal_Internship_report_FIUBA.pdf'
@@ -44,7 +44,7 @@ export default {
   },
   ensta: {
     is: 'course',
-    beginning: new Date('2023.09'),
+    beginning: new Date('2023-09-01'),
     showFrom: true,
     education: true,
     location: [48.713, 2.215],
