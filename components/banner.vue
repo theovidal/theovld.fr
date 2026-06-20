@@ -12,13 +12,7 @@
       :class="{ 'align-center': center }">
       <v-row class="py-7">
         <slot/>
-        <v-expand-transition>
-          <slot
-            v-if="expand"
-            name="expand"/>
-        </v-expand-transition>
       </v-row>
-
       <v-row
           class="bottom justify-center"
           style="z-index: 20">
@@ -28,17 +22,10 @@
             icon="$expand"
             @click="goto(props.target)"
           />
-        <v-btn
-          v-if="hasExpand"
-          variant="text"
-          :icon="expand ? '$minus' : '$plus'"
-          @click="expand = !expand"
-        />
       </v-row>
-
       <v-row
           class="bottom left mt-auto"
-          style="z-index: 10">
+          style="z-index: 10; width: calc(100% - 12px - 16px);">
         <slot name="bottom"/>
       </v-row>
     </v-container>
@@ -79,11 +66,7 @@ const goto = useGoTo()
 
 const slots = useSlots()
 
-const expand = defineModel({ default: false })
-
 const hasTarget = computed(() => props.target !== undefined)
-const hasExpand = computed(() => !!slots.expand)
-const hasBottom = computed(() => hasTarget || hasExpand)
 </script>
 
 <style scoped lang="sass">

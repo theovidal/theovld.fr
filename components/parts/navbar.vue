@@ -56,7 +56,7 @@
     </template>
     <template #append>
       <theme-switcher/>
-      <locale-switcher/>
+      <locale-switcher navbar/>
     </template>
   </v-app-bar>
 </template>

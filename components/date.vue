@@ -1,10 +1,10 @@
 <template>
   <span>
     <template v-if="(showSoon && !props.end)">
-      ({{ $t('general.prospective') }})&nbsp;
+      ({{ $t('general.prospective')}})
     </template>
     <template v-if="(showFrom && !props.end)">
-      {{ $t('general.from') }}&nbsp;
+      {{ $t('general.from') + " " }}
     </template>
     <i18n-d :value="props.beginning" format="short"/>
     <template v-if="props.end && props.beginning.getTime() != props.end.getTime()">

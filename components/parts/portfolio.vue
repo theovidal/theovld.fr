@@ -1,21 +1,11 @@
 <script setup lang="ts">
   import IconDocument from '~icons/mdi/file-document-outline'
   import IconDiscord from '~icons/custom/discord'
+  import MdiChevronRight from '~icons/mdi/chevron-right'
 
   import projects from "~/data/projects";
   import { categories } from "~/data/projects";
-
-  const reposLoaded = ref(false)
-  const { data: repos } = await useFetch(
-      'https://api.github.com/users/theovidal/repos?sort=created&direction=desc&per_page=15',
-      {
-        lazy: true,
-        server: false,
-        onResponse() {
-          reposLoaded.value = true
-        }
-      }
-  )
+  import experiences from "~/data/experiences";
 
   const icons = {
     github: '$github',
@@ -48,6 +38,22 @@
     if (colors === undefined) return "#E0E0E0"
     else return colors[1]
   }
+
+  const filterWithAttachments = (dataObject, type) => {
+    return Object.entries(dataObject)
+      .filter(([key, value]) => value.attachment) // Only keep items with an attachment
+        .sort((a, b) => b[1].date - a[1].date)
+      .map(([key, value]) => ({
+        id: key,
+        type: type, // Optional: helps differentiate them if combined
+        ...value
+      }));
+  };
+  const allAttachments = [
+    ...filterWithAttachments(experiences, 'experience'),
+    ...filterWithAttachments(projects, 'project')
+  ];
+  console.log(allAttachments)
 </script>
 
 <template>
@@ -78,7 +84,9 @@
             :key="projectId"
             class="pa-1"
             cols="12"
-            :sm="category.full ? 3 : 6">
+            sm="6"
+            :md="category.full ? 4 : 6"
+            :lg="category.full ? 3 : 6">
             <v-card
                 :id="`portfolio-${projectId}`"
                 class="b-card box-shadow">
@@ -87,7 +95,7 @@
                 :src="`/img/portfolio/${projectId}-banner-min.webp`"
                 :alt="`Banner for project ${$t(`portfolio.${projectId}.name`)}`"/>
               <v-card-text>
-                <h3 class="text-white text-heading-5 my-0">{{ $t(`portfolio.${projectId}.title`) }}</h3>
+                <h3 class="text-heading-5 my-0">{{ $t(`portfolio.${projectId}.title`) }}</h3>
                 <p class="text-justify font-weight-medium">{{ $t(`portfolio.${projectId}.description`) }}</p>
                 <ul class="pl-0">
                   <li>
@@ -116,7 +124,7 @@
                   {{ tag }}
                 </v-chip>
               </v-card-text>
-              <v-card-actions v-if="projects[projectId].links">
+              <v-card-actions v-if="projects[projectId].links || projects[projectId].attachment">
                 <v-tooltip
                   v-for="(url, name) in projects[projectId].links"
                   :key="name"
@@ -126,84 +134,26 @@
                     <v-btn
                       :href="url"
                       target="_blank"
-                      color="white"
                       variant="text"
                       :icon="icons[name]"
                       v-bind="props">
                     </v-btn>
                   </template>
                 </v-tooltip>
+                <template v-if="projects[projectId].attachment">
+                  <v-spacer/>
+                  <v-btn
+                    class="gradient text-white"
+                    target="_blank"
+                    :append-icon="MdiChevronRight"
+                    :href="projects[projectId].attachment.path">
+                    {{ $t('portfolio.consult')}}
+                  </v-btn>
+                </template>
               </v-card-actions>
             </v-card>
           </v-col>
         </v-row>
-      </v-col>
-      <v-col
-          class="text-center"
-          cols="12">
-        <v-row class="align-center">
-          <h3 class="gradient-text text-headline-large">{{ $t('portfolio.all') }}</h3>
-          <v-btn
-            :text="$t('portfolio.view')"
-            href="https://github.com/theovidal"
-            target="_blank"
-            variant="outlined"
-            append-icon="$openinnew"
-          />
-        </v-row>
-        <v-skeleton-loader
-          :loading="repos === undefined"
-          color="background"
-          type="image">
-          <v-slide-group show-arrows>
-            <v-row class="align-stretch">
-              <v-col
-                v-for="repo in repos"
-                :key="repo.id"
-                class="pa-1">
-                <v-card
-                  :href="repo.html_url"
-                  target="_blank"
-                  class="color-card box-shadow ma-1 h-100"
-                  :style="{
-                    background: `linear-gradient(165deg, ${getPrimaryColor(repo.language)} 0%, ${getSecondaryColor(repo.language)} 100%) !important`,
-                    'max-width': '250px'
-                  }">
-                  <div class="content text-left">
-                    <v-card-title class="d-flex align-center">
-                      {{ repo.name }}
-                      <template v-if="repo.stargazers_count > 0">
-                        <v-spacer/>
-                        <v-icon
-                            size="sm"
-                            color="yellow-darken-2"
-                            icon="$ratingFull"/>
-                        {{ repo.stargazers_count }}
-                      </template>
-                    </v-card-title>
-                    <v-card-text>
-                      <p
-                        v-if="repo.language !== null"
-                        :style="`color: ${getPrimaryColor(repo.language)}`">
-                        {{ repo.language }}
-                      </p>
-                      <p>
-                        {{ repo.description }}
-                      </p>
-                      <v-chip
-                        v-for="topic in repo.topics.slice(0, 4)"
-                        :key="topic"
-                        size="small"
-                        class="ma-1">
-                        {{ topic }}
-                      </v-chip>
-                    </v-card-text>
-                  </div>
-                </v-card>
-              </v-col>
-            </v-row>
-          </v-slide-group>
-        </v-skeleton-loader>
       </v-col>
     </v-row>
   </v-container>

@@ -1,7 +1,7 @@
 <template>
   <v-container class="py-10 skills-content">
     <v-row align="stretch">
-      <v-col cols="12" md="8">
+      <v-col cols="12" lg="8">
         <h3 class="text-headline-large gradient-text mb-4">{{ $t('skills.shortTitle') }}</h3>
         <v-row align="stretch">
           <v-col
@@ -37,7 +37,7 @@
         </v-row>
       </v-col>
 
-      <v-col cols="12" md="4">
+      <v-col cols="12" lg="4">
         <h3 class="text-headline-large gradient-text mb-4">{{ $t('skills.hobbiesTitle') }}</h3>
         <v-card
           v-for="hobby in hobbies"

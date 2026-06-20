@@ -11,12 +11,13 @@
           <h1 class="text-display-large gradient-text ma-0" style="font-size: 96px">Théo Vidal</h1>
           <span class="text-body-large" v-html="$t('home.subtitle')"></span>
         </v-row>
-        <v-row class="justify-center">
+        <v-row class="justify-center" density="compact">
           <socials/>
         </v-row>
       </v-container>
       <template #bottom>
         <locale-switcher/>
+        <v-spacer/>
         <theme-switcher/>
       </template>
     </banner>
@@ -33,7 +34,7 @@
           <p class="text-justify mb-4">{{ $t('introduction.text') }}</p>
           <v-btn
             variant="outlined"
-            :href="`/cv_${locale}.pdf`"
+            href="/files/Vidal_Theo_Academic_CV_2026.pdf"
             target="_blank"
             :text="$t('introduction.resume')"
           />
@@ -55,7 +56,6 @@
         </v-col>
       </v-row>
     </v-container>
-    <footprint/>
     <experience/>
     <skills/>
     <hr/>
@@ -69,7 +69,7 @@
       alt="Photo of the Alps as the banner"
       fullscreen>
       <v-container>
-        <v-row class="justify-center">
+        <v-row class="justify-center" density="compact">
           <socials/>
         </v-row>
       </v-container>

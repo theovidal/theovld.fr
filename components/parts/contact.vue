@@ -4,6 +4,7 @@
       <v-col
           cols="12">
         <h2 class="text-display-large text-center gradient-text my-3">{{ $t('contact.title') }}</h2>
+        <p class="text-center">{{ $t('contact.invitation') }}</p>
       </v-col>
       <v-col
         cols="12"

@@ -1,18 +1,20 @@
 <template>
   <v-tooltip
       v-for="social in socials"
-      :key="social.name"
-      :text="social.name"
-      :aria-label="social.name"
+      :key="social.key ? $t(social.key) : social.name"
+      :text="social.key ? $t(social.key) : social.name"
+      :aria-label="social.key ? $t(social.key) : social.name"
       location="bottom">
     <template #activator="{ props }">
       <v-btn
-          :href="social.link"
-          :aria-label="social.name"
-          target="_blank"
-          variant="text"
-          icon
-          v-bind="props">
+        :href="!social.local && social.link"
+        :to="social.local && social.link"
+        :aria-label="social.name"
+        :target="!social.local && '_blank'"
+        :active="false"
+        variant="text"
+        icon
+        v-bind="props">
         <v-avatar
             v-if="social.image !== undefined"
             :image="social.image">
@@ -26,6 +28,9 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
+
 const socials = [
   {
     name: 'LinkedIn',
@@ -48,8 +53,9 @@ const socials = [
     icon: '$telegram'
   },
   {
-    name: 'Contact form',
+    key: 'contact.shortTitle',
     link: '#contact',
+    local: true,
     icon: '$email'
   }
 ]

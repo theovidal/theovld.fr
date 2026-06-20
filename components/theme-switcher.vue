@@ -7,11 +7,11 @@ const theme = useTheme()
 </script>
 
 <template>
-  <v-tooltip :text="$t('theme.change')">
-    <template #activator="{ tooltip_props }">
+  <v-tooltip :text="$t('general.toggleTheme')">
+    <template #activator="{ props }">
       <v-btn
         variant="text"
-        v-bind="tooltip_props"
+        v-bind="props"
         :icon="MdiThemeLightDark"
         @click="theme.toggle()"/>
     </template>
