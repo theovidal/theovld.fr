@@ -71,7 +71,7 @@ export default defineNuxtConfig({
 
   vite: {
     build: {
-      target: 'baseline-widely-available'
+      target: 'es2020'
     },
     plugins: [
       vuetify({ autoImport: true }),
