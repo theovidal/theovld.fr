@@ -49,6 +49,7 @@ export default {
     education: true,
     location: [48.713, 2.215],
     country: '🇫🇷',
-    logo: 'ensta.svg'
+    logo: 'ensta.svg',
+    padLogo: true
   }
 }

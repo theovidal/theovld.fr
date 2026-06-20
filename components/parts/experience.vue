@@ -59,11 +59,11 @@
       const [x, y] = projected
       return {
         id,
+        ...val,
         lat,
         lng,
         left: (x / MAP_WIDTH) * 100,
         top: (y / MAP_HEIGHT) * 100,
-        country: val.country,
       }
     })
     .filter((p): p is NonNullable<typeof p> => p !== null)
@@ -95,8 +95,20 @@
                   <span class="map-pin__pulse" />
                 </div>
               </template>
-              <div class="text-caption font-weight-bold">{{ point.country }} {{ $t(`experience.${point.id}.title`) }}</div>
-              <div class="text-caption ">{{ $t(`experience.${point.id}.text`) }}</div>
+              <v-row>
+                <div class="d-flex align-center">
+                  <nuxt-img
+                    :src="`/img/experience/${point.logo}`"
+                    :alt="$t(`${point.type}.${point.id}.title`)"
+                    height="44px"
+                    style="background: white; padding: 6px; border-radius: 2px"
+                  />
+                </div>
+                <div class="d-flex flex-column">
+                  <div class="text-caption font-weight-bold">{{ point.country }} {{ $t(`experience.${point.id}.title`) }}</div>
+                  <div class="text-caption ">{{ $t(`experience.${point.id}.text`) }}</div>
+                </div>
+              </v-row>
             </v-tooltip>
           </div>
         </v-card>
@@ -117,8 +129,8 @@
               v-if="entry.showcase"
               size="64">
               <template #icon>
-                <div class="logo-badge">
-                  <img :src="`/img/${entry.type}/${entry.logo}`" :alt="$t(`${entry.type}.${id}.title`)">
+                <div class="logo-badge" :class="{ pad: entry.padLogo }">
+                  <nuxt-img :src="`/img/${entry.type}/${entry.logo}`" :alt="$t(`${entry.type}.${id}.title`)"/>
                 </div>
               </template>
 
@@ -225,8 +237,10 @@
   display: flex
   align-items: center
   justify-content: center
-  padding: 3px
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.18)
+  padding: 2px
+
+  &.pad
+    padding: 6px !important
 
   img
     width: 100%

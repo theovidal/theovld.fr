@@ -47,7 +47,6 @@
             size="200"
             color="grey-lighten-4">
             <nuxt-img
-              provider="ipx"
               src="/img/me-min.webp"
               :alt="$t('introduction.picture')"
               style="width: 100%; height: 100%; object-fit: cover;"

@@ -91,10 +91,12 @@
                 :id="`portfolio-${projectId}`"
                 class="b-card box-shadow">
               <template v-if="!projects[projectId].noBanner">
-                <v-img
+                <nuxt-img
                   v-if="!projects[projectId].noBanner"
                   :src="`/img/portfolio/${projectId}-banner-min.webp`"
-                  :alt="`Banner for project ${$t(`portfolio.${projectId}.name`)}`"/>
+                  :alt="`Banner for project ${$t(`portfolio.${projectId}.name`)}`"
+                  class="w-100"
+                  />
                 <hr style="height: 2px"/>
               </template>
               <v-card-text>

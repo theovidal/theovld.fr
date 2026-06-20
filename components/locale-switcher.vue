@@ -32,11 +32,11 @@
           :value="locale.code"
           @click="changeLocale(locale.code)">
           <template #prepend>
-            <img
-              :src="`/img/locales/${locale.code}-min.png`"
+            <nuxt-img
+              :src="`/img/locales/${locale.code}.svg`"
               :alt="`${locale.code} flag`"
               height="20px"
-              class="pr-2">
+              class="pr-2"/>
           </template>
           {{ locale.name }}
         </v-list-item>
@@ -63,10 +63,10 @@
       v-for="locale in locales"
       :key="locale.code"
       :value="locale.code">
-      <img
-        :src="`/img/locales/${locale.code}-min.png`"
+      <nuxt-img
+        :src="`/img/locales/${locale.code}.svg`"
         :alt="`${locale.code} flag`"
-        height="20px">
+        height="20px"/>
     </v-btn>
   </v-btn-toggle>
 </template>

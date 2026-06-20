@@ -33,7 +33,7 @@
         },
         "nus": {
             "title": "College of Design and Engineering — National University of Singapore (NUS)",
-            "text": "M.Eng en génie mécanique par la recherche. Sous la supervision du Prof. Gianmarco Mengaldo. Émulation physique pour les événements climatiques extrêmes."
+            "text": "M.Eng en ingénierie mécanique par la recherche. Sous la supervision du Prof. Gianmarco Mengaldo. Émulation physique pour les événements climatiques extrêmes."
         },
         "onera": {
             "title": "ONERA, le laboratoire aérospatial français",
@@ -48,8 +48,8 @@
             "text": "Microfluidique expérimentale, écoulements de Marangoni et réseaux thermocapillaires."
         },
         "ensta": {
-            "title": "M.Sc. en ingénierie — ENSTA Paris",
-            "text": "Spécialisation en systèmes dynamiques, fluides compressibles, turbulence et CFD. Classé dans les 5% meilleurs."
+            "title": "Diplôme d'ingénieur — ENSTA Paris",
+            "text": "Spécialisation en systèmes dynamiques, mécanique des fluides incompressibles et compressibles, turbulence et CFD. Classé dans les 5% meilleurs."
         },
         "parc": {
             "title": "Classe préparatoire - Mathématiques, physique, informatique",
