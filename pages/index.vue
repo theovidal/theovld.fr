@@ -9,7 +9,10 @@
       <v-container>
         <v-row class="align-center flex-column text-center">
           <h1 class="text-display-large gradient-text ma-0" style="font-size: 96px">Théo Vidal</h1>
-          <span class="text-body-large" v-html="$t('home.subtitle')"></span>
+          <span class="text-body-large">
+            {{ $t('home.subtitle') }} <br>
+            {{ $t('home.subtitleL2') }}
+          </span>
         </v-row>
         <v-row class="justify-center" density="compact">
           <socials/>

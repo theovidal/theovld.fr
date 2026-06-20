@@ -8,7 +8,8 @@
         "toggleTheme": "Tema oscuro/claro"
     },
     "home": {
-        "subtitle": "Dinámica de fluidos computacional e IA para la física<br/>Estudiante investigador en la intersección de la mecánica de fluidos, la emulación mediante aprendizaje profundo y los sistemas climáticos."
+        "subtitle": "Dinámica de fluidos computacional e IA para la física",
+        "subtitleL2": "Estudiante investigador en la intersección de la mecánica de fluidos, la emulación mediante aprendizaje profundo y los sistemas climáticos"
     },
     "introduction": {
         "title": "Identidad científica",

@@ -8,9 +8,7 @@ import Components from 'unplugin-vue-components/vite'
 export default defineNuxtConfig({
   devtools: { enabled: true },
 
-  image: {
-
-  },
+  image: {},
 
   modules: [
     '@nuxtjs/i18n',
@@ -72,6 +70,9 @@ export default defineNuxtConfig({
   },
 
   vite: {
+    build: {
+      target: 'baseline-widely-available'
+    },
     plugins: [
       vuetify({ autoImport: true }),
       icons({

@@ -53,7 +53,6 @@
     ...filterWithAttachments(experiences, 'experience'),
     ...filterWithAttachments(projects, 'project')
   ];
-  console.log(allAttachments)
 </script>
 
 <template>

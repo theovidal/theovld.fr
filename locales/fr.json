@@ -8,7 +8,8 @@
         "toggleTheme": "Thème sombre/clair"
     },
     "home": {
-        "subtitle": "Mécanique des fluides numérique & IA pour la physique<br/>Étudiant-chercheur à l'intersection de la mécanique des fluides, de l'émulation par apprentissage profond et des systèmes climatiques."
+        "subtitle": "Mécanique des fluides numérique & IA pour la physique",
+        "subtitleL2": "Étudiant-chercheur à l'intersection de la mécanique des fluides, de l'émulation par apprentissage profond et des systèmes climatiques"
     },
     "introduction": {
         "title": "Identité scientifique",

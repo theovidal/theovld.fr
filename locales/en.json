@@ -8,7 +8,8 @@
         "toggleTheme": "Dark/light theme"
     },
     "home": {
-        "subtitle": "Computational Fluid Dynamics & AI for Physics<br/>Research student at the intersection of fluid mechanics, deep learning emulation, and climate systems."
+        "subtitle": "Computational Fluid Dynamics & AI for Physics",
+        "subtitleL2": "Research student at the intersection of fluid mechanics, deep learning emulation, and climate systems"
     },
     "introduction": {
         "title": "Scientific Identity",
