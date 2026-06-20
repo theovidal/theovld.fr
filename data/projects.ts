@@ -44,7 +44,12 @@ export default {
     end: new Date('2025.05'),
     links: {
       github: 'https://github.com/theovidal/aierolab',
-      docs: 'https://github.com/theovidal/aierolab/blob/main/aierolab.pdf'
+    },
+    attachment: {
+      title: 'AIeroLab project: an experimental framework to characterize and optimize aerodynamic performances of an airfoil',
+      date: new Date('2025.06.03'),
+      authors: 'Théo Vidal, Romain Monchaux',
+      path: '/files/Vidal_2025_AIeroLab_An_Experimental_Framework_to_characterize_and_optimize_Aerodynamic_Performances_of_an_Airfoil.pdf'
     }
   },
   lbm: {
@@ -80,6 +85,7 @@ export const categories = {
   },
   'climate-geo': {
     icon: MdiEarth,
+    small: true,
     projects: ['hickathon']
   },
   'fluid-dynamics': {

@@ -34,7 +34,13 @@ export default {
     research: true,
     location: [-34.617, -58.368],
     country: '🇦🇷',
-    logo: 'uba.svg'
+    logo: 'uba.svg',
+    attachment: {
+      date: new Date('2025.08.25'),
+      title: 'Particule separation in microfluidic channels by temperature variation',
+      authors: 'Théo Vidal, Guillermo O. Artana',
+      path: '/files/Vidal_Internship_report_FIUBA.pdf'
+    }
   },
   ensta: {
     is: 'course',

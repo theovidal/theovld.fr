@@ -1,16 +1,11 @@
 {
     "general": {
         "menu": "Navigation menu",
+        "locale": "Locale switcher",
         "from": "From",
         "date": "Date",
         "prospective": "Prospective",
-        "theme": {
-            "toggle": "Toggle light/dark",
-            "change": "Theme selector",
-            "dark": "Dark theme",
-            "light": "Light theme",
-            "auto": "Automatic (system)"
-        }
+        "toggleTheme": "Dark/light theme"
     },
     "home": {
         "subtitle": "Computational Fluid Dynamics & AI for Physics<br/>Research student at the intersection of fluid mechanics, deep learning emulation, and climate systems."
@@ -19,13 +14,14 @@
         "title": "Scientific Identity",
         "text": "Trained in theoretical and numerical fluid dynamics, I am currently engineering two-point correlation equation models for turbulence closures (RANS) using channel flow DNS datasets at ONERA. With a strong track record in academic research, international mobility and self-taught machine learning, I aim to solve complex physics problems using rigorous computation and next-generation AI.",
         "resume": "Academic CV",
-        "picture": "My profile picture"
+        "picture": "Profile picture"
     },
     "experience": {
         "title": "Academic Trajectory",
         "shortTitle": "Trajectory",
         "description": "My academic journey and research appointments.",
         "view": "View on LinkedIn",
+        "consult": "Read report",
         "types": {
             "job": "Job",
             "internship": "Internship",
@@ -67,6 +63,7 @@
         "view": "View on GitHub",
         "madeWith": "Collaborators:",
         "challenges": "Methodology:",
+        "consult": "Read report",
         "links": {
             "github": "GitHub",
             "docs": "Paper / Documentation",
@@ -89,7 +86,7 @@
             "challenges": "Developing a neural network for physics, rigorously conducting numerical experiments"
         },
         "ipt": {
-            "title": "International Physicists' Tournament",
+            "title": "International Physicists' Tournament: Oscillatory Dynamics of Dripping Honey",
             "text": "Experimental investigation on honey dynamics",
             "description": "Physics experiments and theoretical analysis to characterize the coiling and droplet dynamics of honey.",
             "challenges": "Autonomously conducting experimental methodology and theoretical formulation"
@@ -113,10 +110,11 @@
             "challenges": "Managing petabyte-scale simulation databases and deriving statistically robust closure terms."
         },
         "erc_dreamon": {
-            "title": "DREAM-ON ERC - Structure digital twin",
-            "description": "Real-time structural health monitoring with Kalman filtering to build a high-fidelity digital twin ; Machine Learning-based material modeling",
+            "title": "Real-time data assimilation for health monitoring of mechanical structures",
+            "description": "DREAM-ON ERC Project: Real-time structural health monitoring (SHM) with Kalman filtering to build a high-fidelity digital twin ; Machine Learning-based material modeling",
             "challenges": "Collaborating on a project intertwining three PhD students work, extend the code to treat experimental data, integrate the Neural Network in the loop"
         },
+        "allAttachments": "All reports and papers",
         "all": "All projects and repositories"
     },
     "skills": {
@@ -137,13 +135,14 @@
     "contact": {
         "title": "Contact me",
         "shortTitle": "Contact",
-        "link": "https://tally.so/r/3ELgd2"
+        "invitation": "Always open to discussing my projects, exchanging ideas on fluid mechanics and AI, or exploring research collaborations. If you're a fellow researcher, recruiter, or just curious about the work, drop me a message below!",
+        "link": "https://tally.so/embed/3ELgd2?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
     },
     "resources": {
         "shortTitle": "Resources"
     },
     "link": {
         "redirecting": "Redirecting...",
-        "manual": "If you are not redirected automatically, click on the link bellow:"
+        "manual": "If you are not redirected automatically, click on the link below:"
     }
 }
