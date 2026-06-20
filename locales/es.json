@@ -1,12 +1,148 @@
 {
+    "general": {
+        "menu": "Menú de navegación",
+        "locale": "Eleccion de lenguaje",
+        "from": "Desde",
+        "date": "Fecha",
+        "prospective": "Prospectiva",
+        "toggleTheme": "Tema oscuro/claro"
+    },
     "home": {
-        "name": "CV",
-        "subtitle": "Estudiante de ingeniería"
+        "subtitle": "Dinámica de fluidos computacional e IA para la física<br/>Estudiante investigador en la intersección de la mecánica de fluidos, la emulación mediante aprendizaje profundo y los sistemas climáticos."
+    },
+    "introduction": {
+        "title": "Identidad científica",
+        "text": "Formado en dinámica de fluidos teórica y numérica, actualmente desarrollo modelos de ecuaciones de correlación en dos puntos para el cierre de la turbulencia (RANS) utilizando conjuntos de datos DNS de flujo en canal en el ONERA. Con una sólida trayectoria académica, movilidad internacional y aprendizaje autodidacta en machine learning, mi objetivo es resolver problemas físicos complejos combinando computación rigurosa e IA de nueva generación.",
+        "resume": "CV académico",
+        "picture": "Foto de perfil"
+    },
+    "experience": {
+        "title": "Trayectoria académica",
+        "shortTitle": "Trayectoria",
+        "description": "Mi trayectoria académica y mis experiencias de investigación.",
+        "view": "Ver en LinkedIn",
+        "consult": "Leer informe",
+        "types": {
+            "job": "Empleo",
+            "internship": "Prácticas",
+            "association": "Asociación",
+            "course": "Curso académico",
+            "project": "Proyecto",
+            "certificate": "Certificado",
+            "research-internship": "Estancia de investigación"
+        },
+        "nus": {
+            "title": "College of Design and Engineering — National University of Singapore (NUS)",
+            "text": "M.Eng en Ingeniería Mecánica por investigación. Supervisado por el Prof. Gianmarco Mengaldo. Emulación basada en física para eventos climáticos extremos."
+        },
+        "onera": {
+            "title": "ONERA, el laboratorio aeroespacial francés",
+            "text": "Investigador en prácticas sobre el cierre de ecuaciones de turbulencia en dos puntos (RANS) utilizando conjuntos de datos DNS."
+        },
+        "lmps": {
+            "title": "Laboratorio de Mecánica Paris-Saclay (LMPS) — Universidad Paris-Saclay",
+            "text": "Proyecto ERC DREAM-ON. Asimilación de datos mediante filtrado de Kalman y redes neuronales aumentadas con física."
+        },
+        "fiuba": {
+            "title": "Laboratorio de Dinámica de Fluidos — Universidad de Buenos Aires (UBA)",
+            "text": "Microfluídica experimental, flujos de Marangoni y redes térmicas capilares."
+        },
+        "ensta": {
+            "title": "M.Sc. en Ingeniería — ENSTA Paris",
+            "text": "Especialización en sistemas dinámicos, fluidos compresibles, turbulencia y CFD. Clasificado en el 5% superior."
+        },
+        "parc": {
+            "title": "\"Classe préparatoire\" francesa - Matemáticas, física, informática",
+            "text": "Preparación teórica intensiva, clasificado 17º a nivel nacional en el examen de ingreso."
+        }
     },
     "portfolio": {
-        "name": "Portfolio"
+        "title": "Pilares de investigación principales",
+        "shortTitle": "Investigación",
+        "description": "Investigación centrada en la dinámica de fluidos computacional, la emulación mediante IA y los sistemas climáticos a gran escala.",
+        "view": "Ver en GitHub",
+        "madeWith": "Colaboradores:",
+        "challenges": "Metodología:",
+        "consult": "Leer informe",
+        "links": {
+            "github": "GitHub",
+            "docs": "Artículo / Documentación",
+            "website": "Sitio web",
+            "discord": "Servidor de Discord",
+            "demo": "Demostración",
+            "open": "Abrir",
+            "see": "Ver",
+            "visit": "Visitar"
+        },
+        "categories": {
+            "fluid-dynamics": "Mecánica de fluidos y simulación",
+            "ai-emulation": "IA para la emulación física",
+            "climate-geo": "Clima y sistemas geofísicos"
+        },
+        "aierolab": {
+            "title": "AIerolab",
+            "text": "Redes neuronales informadas por la física para perfiles aerodinámicos",
+            "description": "Simulación del flujo alrededor de un perfil aerodinámico mediante aprendizaje automático informado por la física (PINNs), y evaluación de modelos sustitutos para la caracterización aerodinámica rápida.",
+            "challenges": "Desarrollar una red neuronal para la física, llevar a cabo experimentos numéricos de forma rigurosa"
+        },
+        "ipt": {
+            "title": "Torneo Internacional de Físicos: Dinámica oscilatoria de la miel al gotear",
+            "text": "Investigación experimental sobre la dinámica de la miel",
+            "description": "Experimentos físicos y análisis teórico para caracterizar la dinámica de enrollamiento y goteo de la miel.",
+            "challenges": "Llevar a cabo de forma autónoma la metodología experimental y la formulación teórica"
+        },
+        "lbm": {
+            "title": "Simulaciones LBM para verificación RANS",
+            "text": "Escalón descendente con el método de Lattice Boltzmann",
+            "description": "Solver basado en el método de Lattice Boltzmann (LBM) desarrollado para explorar parámetros de influencia y validar casos de referencia experimentales estándar.",
+            "challenges": "Construir solvers LBM numéricamente estables para condiciones de contorno complejas"
+        },
+        "hickathon": {
+            "title": "Hackathon: sistemas de predicción del agua",
+            "text": "Regresión espaciotemporal para datos climáticos",
+            "description": "Pipeline de machine learning para predecir escaseces de agua regionales combinando conjuntos de datos ambientales masivos con XGBoost y redes temporales.",
+            "challenges": "Asimilación de datos en mallas espaciotemporales complejas"
+        },
+        "onera_sim": {
+            "title": "Cierres de turbulencia ONERA",
+            "text": "Modelos RANS a partir de DNS de flujo en canal",
+            "description": "Desarrollo de modelos de ecuaciones de correlación en dos puntos para el cierre de la turbulencia (RANS) utilizando directamente conjuntos de datos DNS de flujo en canal de primer nivel.",
+            "challenges": "Gestionar bases de datos de simulación a escala de petabytes y derivar términos de cierre estadísticamente robustos."
+        },
+        "erc_dreamon": {
+            "title": "Asimilación de datos en tiempo real para el monitoreo de salud de estructuras mecánicas",
+            "description": "Proyecto ERC DREAM-ON: monitoreo de salud estructural (SHM) en tiempo real mediante filtrado de Kalman para construir un gemelo digital de alta fidelidad; modelado de materiales mediante machine learning",
+            "challenges": "Colaborar en un proyecto que entrelaza el trabajo de tres doctorandos, extender el código para tratar datos experimentales, integrar la red neuronal en el bucle"
+        },
+        "allAttachments": "Todos los informes y artículos",
+        "all": "Todos los proyectos y repositorios"
+    },
+    "skills": {
+        "shortTitle": "Habilidades",
+        "hobbiesTitle": "Aficiones",
+        "view": "Ver perfil",
+        "categories": {
+            "physics": "Computación y física",
+            "ai": "IA y computación científica",
+            "engineering": "Lenguajes e ingeniería básica"
+        }
+    },
+    "hobbies": {
+        "climbing": "Escalada y boulder",
+        "hiking": "Senderismo y exploración al aire libre",
+        "travel": "Viajes e inmersión internacional"
+    },
+    "contact": {
+        "title": "Contáctame",
+        "shortTitle": "Contacto",
+        "invitation": "Siempre estoy dispuesto a hablar de mis proyectos, intercambiar ideas sobre mecánica de fluidos e inteligencia artificial, o explorar posibles colaboraciones de investigación. Si usted es investigador, responsable de selección de personal o simplemente tiene curiosidad por mi trabajo, ¡envíeme un mensaje más abajo!",
+        "link": "https://tally.so/embed/lbgLr6?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
     },
     "resources": {
-        "name": "Recursos"
+        "shortTitle": "Recursos"
+    },
+    "link": {
+        "redirecting": "Redirigiendo...",
+        "manual": "Si no eres redirigido automáticamente, haz clic en el siguiente enlace:"
     }
 }

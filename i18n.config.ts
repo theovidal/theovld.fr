@@ -19,7 +19,7 @@ export default {
         weekday: 'short', hour: 'numeric', minute: 'numeric'
       }
     },
-     es: {
+    es: {
       short: {
         year: 'numeric', month: 'long'
       },

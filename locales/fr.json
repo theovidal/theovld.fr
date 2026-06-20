@@ -1,207 +1,148 @@
 {
     "general": {
         "menu": "Menu de navigation",
+        "locale": "Sélecteur de langue",
         "from": "Depuis",
-        "date": "Date"
+        "date": "Date",
+        "prospective": "À venir",
+        "toggleTheme": "Thème sombre/clair"
     },
     "home": {
-        "subtitle": "ENSTA Paris ‒ Diplôme d'ingénieur<br/>Laboratoire de Mécanique Paris-Saclay (LMPS) ‒ Stagiaire chercheur<br/>Machine Learning en auto-didacte"
+        "subtitle": "Mécanique des fluides numérique & IA pour la physique<br/>Étudiant-chercheur à l'intersection de la mécanique des fluides, de l'émulation par apprentissage profond et des systèmes climatiques."
     },
     "introduction": {
-        "title": "Bienvenue! 👋",
-        "text": "Je m'appelle Théo, je suis actuellement étudiant en école d'ingénieur à l'ENSTA Paris. J'effectue un stage de césure au Laboratoire de Mécanique Paris-Saclay (LMPS), travaillant sur le projet DREAM-ON de contrôle santé de structures en temps réel. J'ai toujours été attiré par les sciences et la technologie, je souhaite ainsi participer à la création de projets variés et innovants. Sur mon temps libre, je développe des petits projets et fais de l'escalade, parmis d'autres occupations. N'hésitez-pas à me contacter pour toute information, ou simplement pour discuter!",
-        "resume": "Mon CV",
-        "picture": "Ma photo de profil"
+        "title": "Identité scientifique",
+        "text": "Formé à la mécanique des fluides théorique et numérique, je développe actuellement des modèles d'équations de corrélation en deux points pour la fermeture de la turbulence (RANS) à partir de jeux de données DNS d'écoulements en canal à l'ONERA. Fort d'un parcours académique solide, d'une expérience de mobilité internationale et d'un apprentissage autodidacte du machine learning, je vise à résoudre des problèmes physiques complexes en combinant calcul rigoureux et IA de nouvelle génération.",
+        "resume": "CV académique",
+        "picture": "Photo de profil"
     },
     "experience": {
-        "title": "Mon parcours",
+        "title": "Parcours académique",
         "shortTitle": "Parcours",
-        "description": "Cliquez sur un élément pour voir les détails!",
+        "description": "Mon parcours académique et mes expériences de recherche.",
         "view": "Voir sur LinkedIn",
-
+        "consult": "Lire le rapport",
         "types": {
             "job": "Emploi",
             "internship": "Stage",
-            "seasonal": "Emploi saisonnier",
             "association": "Association",
-            "course": "Formation",
+            "course": "Cursus académique",
             "project": "Projet",
-            "certificate": "Certification",
+            "certificate": "Certificat",
             "research-internship": "Stage de recherche"
         },
-
+        "nus": {
+            "title": "College of Design and Engineering — National University of Singapore (NUS)",
+            "text": "M.Eng en génie mécanique par la recherche. Sous la supervision du Prof. Gianmarco Mengaldo. Émulation physique pour les événements climatiques extrêmes."
+        },
+        "onera": {
+            "title": "ONERA, le laboratoire aérospatial français",
+            "text": "Stagiaire de recherche sur la fermeture des équations de turbulence en deux points (RANS) à partir de jeux de données DNS."
+        },
         "lmps": {
-            "title": "Laboratoire de Mécanique Paris-Saclay (LMPS) - Université Paris-Saclay",
-            "text": "Projet DREAM-ON : contrôle santé de structures augmenté par l'IA",
-            "link": "https://erc-dreamon.ens-paris-saclay.fr/fr"
+            "title": "Laboratoire de Mécanique Paris-Saclay (LMPS) — Université Paris-Saclay",
+            "text": "Projet ERC DREAM-ON. Assimilation de données par filtrage de Kalman et réseaux de neurones augmentés par la physique."
         },
         "fiuba": {
-            "title": "Laboratoire de Dynamique des fluides - Université de Buenos Aires (UBA), Argentine \uD83C\uDDE6\uD83C\uDDF7",
-            "text": "Étude de réseaux microfluidiques",
-            "link": "https://typst.app/project/r7jusr0D2XucPEEbKogQUm"
-        },
-        "taep": {
-            "title": "TAEP, la Junior-Entreprise d'ENSTA Paris",
-            "text": "Responsable de Développement Commercial",
-            "link": "https://taep.fr"
+            "title": "Laboratoire de Dynamique des Fluides — Université de Buenos Aires (UBA)",
+            "text": "Microfluidique expérimentale, écoulements de Marangoni et réseaux thermocapillaires."
         },
         "ensta": {
-            "title": "ENSTA Paris",
-            "text": "Diplôme d'ingénieur",
-            "link": "https://www.linkedin.com/in/theovidal/details/education/"
-        },
-        "cambridge": {
-            "title": "Compétences linguistiques - Anglais",
-            "text": "Certificat Cambridge C1",
-            "link": "https://www.linkedin.com/in/theovidal/details/certifications/"
+            "title": "M.Sc. en ingénierie — ENSTA Paris",
+            "text": "Spécialisation en systèmes dynamiques, fluides compressibles, turbulence et CFD. Classé dans les 5% meilleurs."
         },
         "parc": {
-            "title": "Lycée du Parc, Lyon",
-            "text": "Classe préparatoire Mathématiques, Physique, Informatique",
-            "link": "https://www.linkedin.com/in/theovidal/details/education/"
-        },
-        "areas": {
-            "title": "Columbus Café&Co et Ibis Hôtels",
-            "text": "Employé polyvalent sur aire d'autoroute"
-        },
-        "carriat": {
-            "title": "Lycée Carriat, Bourg-en-Bresse",
-            "text": "Baccalauréat Général ‒ Mathématiques, Sciences de l'ingénieur",
-            "link": "https://www.linkedin.com/in/theovidal/details/education/"
+            "title": "Classe préparatoire - Mathématiques, physique, informatique",
+            "text": "Préparation théorique intensive, classé 17ème national au concours d'entrée."
         }
     },
     "portfolio": {
-        "title": "Mes projets",
-        "shortTitle": "Portfolio",
-        "description": "Projets de développement et/ou d'ingénierie, utilisant partiellement ou totalement des compétences développées en auto-didacte sur mon temps libre.",
-
+        "title": "Axes de recherche principaux",
+        "shortTitle": "Recherche",
+        "description": "Recherche centrée sur la mécanique des fluides numérique, l'émulation par IA et les systèmes climatiques à grande échelle.",
         "view": "Voir sur GitHub",
-        "madeWith": "Réalisé avec",
-        "challenges": "Défis :",
-
+        "madeWith": "Collaborateurs :",
+        "challenges": "Méthodologie :",
+        "consult": "Lire le rapport",
         "links": {
             "github": "GitHub",
-            "docs": "Documentation",
-            "website": "Site Internet",
+            "docs": "Article / Documentation",
+            "website": "Site web",
+            "discord": "Serveur Discord",
             "demo": "Démonstration",
             "open": "Ouvrir",
             "see": "Voir",
-            "visit": "Visiter",
-            "discord": "Serveur Discord"
+            "visit": "Visiter"
         },
-
         "categories": {
-            "web": "Développement Web",
-            "algorithmic": "Algorithmique",
-            "ml": "Machine Learning",
-            "physics": "Physique et Simulation",
-            "engineering": "Ingénierie",
-            "utils": "Utilitaires"
-        },
-
-        "highest": {
-            "title": "Highest",
-            "text": "Application web d'escalade",
-            "description": "Application web pour grimpeurs afin d'enregistrer ses voies et sa progression, motivée par ma passion pour l'escalade",
-            "challenges": "Optimisation et déploiement d'une application web complète"
-        },
-        "bop": {
-            "title": "BecauseOfProg",
-            "text": "Blog & Équipe de développeurs",
-            "description": "Nous sommes des passionnés d'informatique réunis ensemble pour créer et partager nos découvertes.",
-            "challenges": "Écriture d'articles de vulgarisation, développement d'un blog et gestion de projets depuis mes 14 ans"
-        },
-        "mapping": {
-            "title": "Mapping 3D",
-            "text": "Plateforme de cartographie 3D",
-            "description": "Plateforme imprimée en 3D et équipée d'un capteur LiDAR pour modéliser une pièce. Retranscris en direct sur un site Internet et possibilités de calculs et reconstructions de surface.",
-            "challenges": "Interface avec les composants, communication radio, modélisation 3D"
-        },
-        "tipe": {
-            "title": "Drone de reconnaissance pour séisme",
-            "text": "Algorithme de tracé de trajectoires en milieu urbain",
-            "description": "Algorithmes de planification de trajectoire pour des drones afin d'explorer des zones sinistrées par un séisme, en tenant compte de la topographie et des densités de population.",
-            "challenges": "Application d'une démarche scientifique rigoureuse avec de multiples algorithmes différents et résumé des résultats"
-        },
-        "vision": {
-            "title": "Vision par ordinateur sur MATLAB",
-            "text": "Détection de feux rouges en direct",
-            "description": "Algorithme efficace utilisant les données de couleur et de forme de l'image pour détecter les feux rouges.",
-            "challenges": "Utilisation des espaces de couleur, recherche poussée de l'efficacité maximale pour un résultat rapide et fiable"
+            "fluid-dynamics": "Mécanique des fluides & simulation",
+            "ai-emulation": "IA pour l'émulation physique",
+            "climate-geo": "Climat & systèmes géophysiques"
         },
         "aierolab": {
             "title": "AIerolab",
-            "text": "Modélisation d'une aile par IA et expériences aérodynamiques",
-            "description": "Simulation de l'écoulement autour d'une aile par Machine Learning, et impression 3D d'un modèle pour caractériser son aérodynamisme dans une soufflerie",
-            "challenges": "Développer un réseau de neurones pour la physique, conduire des expérimentations rigoureuses"
+            "text": "Réseaux de neurones informés par la physique pour profils aérodynamiques",
+            "description": "Simulation de l'écoulement autour d'un profil aérodynamique par apprentissage automatique informé par la physique (PINNs), et évaluation de modèles de substitution pour la caractérisation aérodynamique rapide.",
+            "challenges": "Développer un réseau de neurones pour la physique, mener rigoureusement des expériences numériques"
         },
         "ipt": {
-            "title": "Tournoi de Physique - Caractérisation du miel",
-            "text": "Recherche physique sur les oscillations du miel",
-            "description": "Expériences physiques et analyses visant à caractériser les oscillations du miel, dans le cadre du tournoi international de physique (IPT)",
-            "challenges": "Réaliser ma première démarche de recherche en autonomie"
+            "title": "Tournoi International de Physique : Dynamique oscillatoire du miel qui coule",
+            "text": "Étude expérimentale de la dynamique du miel",
+            "description": "Expériences physiques et analyse théorique pour caractériser la dynamique d'enroulement et de gouttes du miel.",
+            "challenges": "Conduire de manière autonome la méthodologie expérimentale et la formulation théorique"
         },
         "lbm": {
-            "title": "LBM pour la marche descendante",
-            "text": "Simulation par LBM",
-            "description": "Simulation par Lattice-Boltzmann du problème de la marche descendante, exploration de l'influence des paramètres et comparaison avec la bibliographie",
-            "challenges": "Programmer entièrement une simulation complexe de mécanique des fluides, analyser rigoureusement les résultats"
+            "title": "Simulations LBM pour la vérification RANS",
+            "text": "Marche descendante en méthode de Boltzmann sur réseau",
+            "description": "Solveur en méthode de Boltzmann sur réseau (LBM) développé pour explorer les paramètres d'influence et valider des cas-tests expérimentaux standards.",
+            "challenges": "Construire des solveurs LBM numériquement stables pour des conditions aux limites complexes"
         },
         "hickathon": {
-            "title": "Hi!ckathon - Hi!Paris hackathon",
-            "text": "Hackathon - Prédiction de pénuries d'eau",
-            "description": "Une compétition de 48 heures en Machine Learning pour prédire les pénuries d'eau durant les mois d'été, par équipes de 5 à 8 en utilisant une large base de données",
-            "challenges": "Appliquer mes connaissances de ML dans un business case, travailler à plusieurs sur un projet de ML"
+            "title": "Hackathon : systèmes de prédiction de l'eau",
+            "text": "Régression spatio-temporelle pour données climatiques",
+            "description": "Pipeline de machine learning pour prédire les pénuries d'eau régionales en combinant des jeux de données environnementales massifs avec XGBoost et des réseaux temporels.",
+            "challenges": "Assimilation de données sur des grilles spatio-temporelles complexes"
         },
-        "joyero": {
-            "title": "Joyero (Hackathon MIT)",
-            "text": "Hackathon - Agent IA de prototypage 3D",
-            "description": "Une compétition de 17 heures pour répondre à un problème en utilisant la technologie des LLM. Mon choix s'est porté sur un agent IA pour prototyper des modèles 3D naturellement et rapidement, à travers une conversation et utilisant l'IA générative",
-            "challenges": "Apprendre à développer des agents avec utilisation d'outils en si peu de temps, faire des itérations rapides avec des LLM"
+        "onera_sim": {
+            "title": "Fermetures de turbulence ONERA",
+            "text": "Modèles RANS à partir de DNS d'écoulement en canal",
+            "description": "Développement de modèles d'équations de corrélation en deux points pour la fermeture de la turbulence (RANS) à partir de jeux de données DNS d'écoulement en canal de premier plan.",
+            "challenges": "Gérer des bases de données de simulation à l'échelle du pétaoctet et dériver des termes de fermeture statistiquement robustes."
         },
+        "erc_dreamon": {
+            "title": "Assimilation de données en temps réel pour le suivi de santé des structures mécaniques",
+            "description": "Projet ERC DREAM-ON : suivi de santé structurelle (SHM) en temps réel par filtrage de Kalman pour construire un jumeau numérique haute-fidélité ; modélisation de matériaux par machine learning",
+            "challenges": "Collaborer sur un projet croisant le travail de trois doctorants, étendre le code pour traiter des données expérimentales, intégrer le réseau de neurones dans la boucle"
+        },
+        "allAttachments": "Tous les rapports et articles",
         "all": "Tous les projets et dépôts"
     },
-    "interests": {
-        "title": "Mes centres d'intérêt",
-        "shortTitle": "Intérêts",
-        "code": {
-            "name": "Programmation informatique",
-            "description": "Passionné de longue date par l'informatique, je réalise mes propres applications et sites web depuis mes 12 ans (2016) pour concrétiser mes idées. Je publie depuis 2018 certains d'entre eux sur GitHub pour partager mes créations et les ouvrir à la contribution de tous. J'ai appris les langages OCaml et C en classe préparatoire, Javascript, Python, Ruby et Go en autodidacte, et utilise les IDE Jetbrains sur Linux. ",
-            "stats": {
-                "repos": "Dépôts GitHub",
-                "languages": "Langages pratiqués"
-            },
-            "link": "Mes projets"
-        },
-        "climbing": {
-            "name": "Escalade",
-            "description": "Depuis 2018 et mon inscription en club, j'apprécie arpenter des voies de difficulté ou de bloc, en intérieur ou en extérieur, pour me défier et me vider la tête. Je complète cette pratique par des sports variés (musculation, cardio, VTT) pour toujours avoir une forme me permettant de progresser. Je participe également à des compétitions universitaires ainsi qu'à des sorties de groupe organisées par l'association d'escalade de l'ENSTA Paris.",
-            "stats": {
-                "level": "Niveau (tête)",
-                "competitions": "Compétitions & contests"
-            },
-            "link": "Mon application d'escalade"
-        },
-        "cubing": {
-            "name": "Casses-têtes \"twisty\"",
-            "description": "J'ai appris à résoudre le Rubik's Cube puis mémorisé divers algorithmes pour le faire de plus en plus rapidement (discipline du Speed Cubing) et j'ai poursuivi avec d'autres casses-têtes. J'ai à terme l'ambition de participer à des compétitions, moments conviviaux d'échange sur ce vaste domaine. Je résout également des puzzles plus exotiques sans aide pour comprendre leur mécanisme en profondeur et éveiller ma curiosité.",
-            "stats": {
-                "number": "Puzzles différents",
-                "threeRecord": "Record au 3x3"
-            },
-            "link": "Chronomètre (Bot Telegram)"
+    "skills": {
+        "shortTitle": "Compétences",
+        "hobbiesTitle": "Loisirs",
+        "view": "Voir le profil",
+        "categories": {
+            "physics": "Calcul & physique",
+            "ai": "IA & calcul scientifique",
+            "engineering": "Langages & génie de base"
         }
     },
+    "hobbies": {
+        "climbing": "Escalade & bloc",
+        "hiking": "Randonnée & exploration en plein air",
+        "travel": "Voyages & immersion internationale"
+    },
     "contact": {
-        "title": "Rencontrons-nous!",
+        "title": "Me contacter",
         "shortTitle": "Contact",
+        "invitation": "Je suis toujours disposé à discuter de mes projets, à échanger des idées sur la mécanique des fluides et l'IA, ou à explorer des possibilités de collaboration en matière de recherche. Si vous êtes chercheur, recruteur ou simplement curieux d'en savoir plus sur mes travaux, n'hésitez pas à m'envoyer un message ci-dessous !",
         "link": "https://tally.so/embed/mD5YDR?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
     },
     "resources": {
         "shortTitle": "Ressources"
     },
     "link": {
-        "redirecting": "Redirection...",
-        "manual": "Si vous n'êtes pas redirigé automatiquement, cliquez ci-dessous :"
+        "redirecting": "Redirection en cours...",
+        "manual": "Si vous n'êtes pas redirigé automatiquement, cliquez sur le lien ci-dessous :"
     }
 }
